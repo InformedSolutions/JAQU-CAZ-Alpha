@@ -1,0 +1,52 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Check vehicle compliance
+{% endblock %}
+
+{% block content %}   
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+    
+      <h1 class="govuk-heading-l">
+        Check vehicle compliance
+      </h1>
+
+      <br>
+
+      <div class="govuk-warning-text">
+        <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+        <strong class="govuk-warning-text__text">
+          <span class="govuk-warning-text__assistive">Warning</span>
+          The vehicle with registration 'X4648YD' does not comply with the Leeds Clean Air Zone, therefore will be subject to the following charge:
+        </strong>
+      </div>
+      <table class="govuk-table">
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell" scope="row"></td>
+            <td class="govuk-table__cell"></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell" scope="row">Vehicle registration</td>
+            <td class="govuk-table__cell">{{ data['vrn'] }}</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell" scope="row">Clean Air Zone</td>
+            <td class="govuk-table__cell">Leeds</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell" scope="row">Charge</td>
+            <th class="govuk-table__cell">£10</th>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>Return to the <a href="/vehicle-checker/enter-vehicle-details/">Pay a Clean Air Zone charge</a> page.</p>
+
+    </div>
+</div>
+
+{% endblock %}
