@@ -20,9 +20,10 @@
         <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
         <strong class="govuk-warning-text__text">
           <span class="govuk-warning-text__assistive">Warning</span>
-          The vehicle with registration 'X4648YD' does not comply with the Leeds Clean Air Zone, therefore will be subject to the following charge:
+          The vehicle with registration '{{ data['vrn'] }}' does not comply with the Leeds Clean Air Zone, therefore will be subject to the following charge:
         </strong>
       </div>
+      {% if useAutoStoreData %}
       <table class="govuk-table">
         <tbody class="govuk-table__body">
           <tr class="govuk-table__row">
@@ -43,6 +44,7 @@
           </tr>
         </tbody>
       </table>
+      {% endif %}
 
       <p>Return to the <a href="/vehicle-checker/enter-vehicle-details/">Pay a Clean Air Zone charge</a> page.</p>
 
