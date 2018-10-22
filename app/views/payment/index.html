@@ -2,20 +2,16 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  Check vehicle compliance
+  Make a one-off payment
 {% endblock %}
 
-<<<<<<< HEAD
-{% block content %}
-=======
 {% block content %}   
->>>>>>> discovery
 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
       
       <h1 class="govuk-heading-l">
-        Check vehicle compliance
+        Make a one-off payment
       </h1>
 
       <br>
@@ -23,13 +19,13 @@
       <h2 class="govuk-heading-m">Enter vehicle details</h2>
 
       <div class="govuk-form-group">
-        <label class="govuk-label" for="vrn">
+        <label class="govuk-label" for="vrn-pay">
           Vehicle registration (number details)
         </label>
         <span id="vrn-hint" class="govuk-hint">
           For example, CU57ABC
         </span>
-        <input class="govuk-input govuk-input--width-10" id="vrn" name="vrn" type="text" value="{{ data['vrn'] }}">
+        <input class="govuk-input govuk-input--width-10" id="vrn-pay" name="vrn-pay" type="text" value="{{ data['vrn'] }}">
       </div>
 
       <div class="govuk-form-group">
@@ -43,7 +39,7 @@
 
       <br>
 
-      <form action="/vehicle-checker/confirm-vehicle">
+      <form action="https://www.payments.service.gov.uk/card_details/r85hecladh3lf3tbqh95pvgflh">
         <button type="submit" class="govuk-button">
             Continue
         </button>
