@@ -19,6 +19,6 @@ Example usage:
 
 module.exports = {
 
-  // Insert values here
+  "vrn": "X4648YD"
 
 }
