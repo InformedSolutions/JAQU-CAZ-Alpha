@@ -1,7 +1,7 @@
 {
-  "name": "express-prototype",
+  "name": "jaqu-caz-alpha",
   "description": "GOVUK prototyping app in Express",
-  "version": "8.2.0",
+  "version": "0.0.1",
   "private": true,
   "engines": {
     "node": "^8.9.1"
@@ -53,5 +53,27 @@
     "ignore": [
       "nunjucks"
     ]
-  }
+  },
+  "main": "gulpfile.js",
+  "directories": {
+    "doc": "docs",
+    "test": "test"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/InformedSolutions/JAQU-CAZ-Alpha.git"
+  },
+  "keywords": [
+    "jaqu",
+    "caz",
+    "alpha",
+    "prototype"
+  ],
+  "author": "Informed Solutions",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/InformedSolutions/JAQU-CAZ-Alpha/issues"
+  },
+  "homepage": "https://github.com/InformedSolutions/JAQU-CAZ-Alpha#readme"
 }
