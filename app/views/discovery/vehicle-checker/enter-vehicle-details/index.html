@@ -17,29 +17,28 @@
       <br>
 
       <h2 class="govuk-heading-m">Enter vehicle details</h2>
-
-      <div class="govuk-form-group">
-        <label class="govuk-label" for="vrn">
-          Vehicle registration (number details)
-        </label>
-        <span id="vrn-hint" class="govuk-hint">
-          For example, CU57ABC
-        </span>
-        <input class="govuk-input govuk-input--width-10" id="vrn" name="vrn" type="text" value="{{ data['vrn'] }}">
-      </div>
-
-      <div class="govuk-form-group">
-        <label class="govuk-label" for="country-of-registration">
-          Country of registration
-        </label>
-        <select class="govuk-select govuk-select" id="country-of-registration" name="country-of-registration">
-          <option value="uk">United Kingdom</option>
-        </select>
-      </div>
-
-      <br>
-
       <form action="/discovery/vehicle-checker/compliance">
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="vrn">
+            Vehicle registration (number details)
+          </label>
+          <span id="vrn-hint" class="govuk-hint">
+            For example, CU57ABC
+          </span>
+          <input class="govuk-input govuk-input--width-10" id="vrn" name="vrn" type="text" value="{{ data['vrn'] }}">
+        </div>
+
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="country-of-registration">
+            Country of registration
+          </label>
+          <select class="govuk-select govuk-select" id="country-of-registration" name="country-of-registration">
+            <option value="uk">United Kingdom</option>
+          </select>
+        </div>
+
+        <br>
+        
         <button type="submit" class="govuk-button">
             Continue
         </button>
