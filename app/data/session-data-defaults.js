@@ -19,6 +19,4 @@ Example usage:
 
 module.exports = {
 
-  "vrn": "X4648YD"
-
 }
