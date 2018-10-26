@@ -7,7 +7,6 @@
 
 - [ ] develop branch has been merged into branch
 - [ ] Code linting has been applied
-- [ ] Unit tests passed
 - [ ] PR named appropriately
 - [ ] PR description describes the overall goals of PR commits
 
