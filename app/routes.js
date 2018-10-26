@@ -15,4 +15,14 @@ router.post('/vehicle-checker/local-authority', function (req, res) {
     }
 });
 
+router.post('/vehicle-checker/birmingham/compliance', function (req, res) {
+    var confirm = req.body['confirm-vehicle'];
+
+    if (confirm == 'yes') {
+        res.redirect('/vehicle-checker/birmingham/compliance')
+    } else if (confirm == 'no') {
+        res.redirect('/vehicle-checker/birmingham/enter-vehicle-details')
+    }
+});
+
 module.exports = router
