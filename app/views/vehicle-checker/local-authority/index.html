@@ -18,7 +18,7 @@
 
       <p>Select the CAZ Local Authority for which you would like to check if your vehicle is compliant.</p>
 
-      <form action="/vehicle-checker/{{ data['local-authority'] }}/enter-vehicle-details">
+      <form method="post" class="form" action="/vehicle-checker/local-authority">
         <div class="govuk-form-group">
           <label class="govuk-label" for="sort">
             <b>CAZ Local Authority</b>
