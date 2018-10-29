@@ -1,0 +1,93 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Check vehicle compliance
+{% endblock %}
+
+{% block content %}   
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+    
+      <h1 class="govuk-heading-l">
+        Is this your vehicle?
+      </h1>
+
+      <p>We have found the following details for the vehicle registration number you have entered. Please confirm if this matches your vehicle.</p>
+
+      <table class="govuk-table">
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell" scope="row"></td>
+            <td class="govuk-table__cell"></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell" scope="row">Registration number</td>
+            <th class="govuk-table__cell">{{ data['vrn'] }}</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell" scope="row">Make</td>
+            <th class="govuk-table__cell">Peugeot</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell" scope="row">Colour</td>
+            <th class="govuk-table__cell">Grey</th>
+          </tr>
+        </tbody>
+      </table>
+
+      <form method="post" class="form" action="/vehicle-checker/leeds/compliance">
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" aria-describedby="confirm-vehicle-hint">
+            <div class="govuk-radios govuk-radios--inline">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="confirm-vehicle-1" name="confirm-vehicle" type="radio" value="yes">
+                <label class="govuk-label govuk-radios__label" for="confirm-vehicle-1">
+                  Yes
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="confirm-vehicle-2" name="confirm-vehicle" type="radio" value="no">
+                <label class="govuk-label govuk-radios__label" for="confirm-vehicle-2">
+                  No, search again
+                </label>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+
+        <details class="govuk-details">
+          <summary class="govuk-details__summary">
+            <span class="govuk-details__summary-text">
+              Incorrect vehicle details?
+            </span>
+          </summary>
+          <div class="govuk-details__text">
+            If you believe the vehicle details are incorrect, please write to:
+            <br>
+            <br>
+            Joint Air Quality Unit
+            <br>
+            Department for Environment, Food & Rural Affairs
+            <br>
+            Nobel House, 17 Smith Square
+            <br>
+            London
+            <br>
+            SW1P 3JR
+            <br>
+            <br>
+            You'll need to include your vehicle registration certificate.
+          </div>
+        </details>
+
+        <button type="submit" class="govuk-button">
+            Confirm
+        </button>
+      </form>  
+
+    </div>
+</div>
+
+{% endblock %}

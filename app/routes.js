@@ -29,4 +29,14 @@ router.post('/vehicle-checker/birmingham/compliance', function (req, res) {
     }
 });
 
+router.post('/vehicle-checker/leeds/compliance', function (req, res) {
+    var confirm = req.body['confirm-vehicle'];
+
+    if (confirm == 'yes') {
+        res.redirect('/vehicle-checker/leeds/compliance')
+    } else if (confirm == 'no') {
+        res.redirect('/vehicle-checker/leeds/enter-vehicle-details')
+    }
+});
+
 module.exports = router
