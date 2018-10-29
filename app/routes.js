@@ -8,8 +8,12 @@ router.post('/vehicle-checker/local-authority', function (req, res) {
 
     if (localAuthority == 'birmingham') {
         res.redirect('/vehicle-checker/birmingham/enter-vehicle-details')
+    } else if (localAuthority == 'derby') {
+        res.redirect('/vehicle-checker/derby/enter-vehicle-details')
     } else if (localAuthority == 'leeds') {
         res.redirect('/vehicle-checker/leeds/enter-vehicle-details')
+    } else if (localAuthority == 'nottingham') {
+        res.redirect('/vehicle-checker/nottingham/enter-vehicle-details')
     } else if (localAuthority == 'southampton') {
         res.redirect('/vehicle-checker/southampton/enter-vehicle-details')
     }
