@@ -7,15 +7,15 @@ router.post('/vehicle-checker/local-authority', function (req, res) {
     var localAuthority = req.body['local-authority'];
 
     if (localAuthority == 'birmingham') {
-        res.redirect('/vehicle-checker/birmingham/enter-vehicle-details')
+        res.redirect('/vehicle-checker/birmingham')
     } else if (localAuthority == 'derby') {
-        res.redirect('/vehicle-checker/derby/enter-vehicle-details')
+        res.redirect('/vehicle-checker/derby')
     } else if (localAuthority == 'leeds') {
-        res.redirect('/vehicle-checker/leeds/enter-vehicle-details')
+        res.redirect('/vehicle-checker/leeds')
     } else if (localAuthority == 'nottingham') {
-        res.redirect('/vehicle-checker/nottingham/enter-vehicle-details')
+        res.redirect('/vehicle-checker/nottingham')
     } else if (localAuthority == 'southampton') {
-        res.redirect('/vehicle-checker/southampton/enter-vehicle-details')
+        res.redirect('/vehicle-checker/southampton')
     }
 });
 
