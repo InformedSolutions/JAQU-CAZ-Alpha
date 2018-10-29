@@ -41,7 +41,9 @@
     serviceUrl: "/",
     containerClasses: "govuk-width-container"
   }) }}
-{% endblock %} 
+  {% include "includes/phase-banner.html" %}
+{% endblock %}
+
 
 {% if useAutoStoreData %}
   {% block footer %}
