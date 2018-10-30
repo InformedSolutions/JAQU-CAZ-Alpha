@@ -1,0 +1,87 @@
+
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Charging Clean Air Zones
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">
+        Birmingham Clean Air Zone
+      </h1>
+
+      <p>Check online to find out whether your vehicle complies with the emissions standards of the Birmingham Clean Air Zone.</p>
+      
+      <h2 class="govuk-heading-m">
+        Before you start
+      </h2>
+
+      <p>You'll need your vehicle's registration number.</p>
+
+      <br>
+
+      <a href="/vehicle-checker/birmingham/enter-vehicle-details" role="button" draggable="false" class="govuk-button govuk-button--start">
+        Start now
+      </a>
+
+      <br>
+      <br>
+
+      <h2 class="govuk-heading-m">
+        Local Authority updates
+      </h2>
+
+      <div class="govuk-warning-text">
+        <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+        <strong class="govuk-warning-text__text">
+          <span class="govuk-warning-text__assistive">Warning</span>
+          The M6 will be temporarily closed between 31 November and 5 December, 2018 due to road works, between junctions 5 and 6. CAZ charges will not apply for this period.
+        </strong>
+      </div>
+      <div class="govuk-warning-text">
+        <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+        <strong class="govuk-warning-text__text">
+          <span class="govuk-warning-text__assistive">Warning</span>
+          From 25 November, 2018, the A34 up until Perry Bar will become a part of the Birmingham CAZ. Please note that you will be charged for driving a non-compliant vehicle across this road.
+        </strong>
+      </div>
+
+      <h2 class="govuk-heading-m">
+        Find out more
+      </h2>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li><a href="">Birmingham Clean Air Zone</a></li>
+        <li><a href="">The benefits of Clean Air Zones</a></li>
+        <li><a href="">Clean Air Zone emissions standards</a></li>
+        <li><a href="">Which vehicles are impacted by the Clean Air Zones</a></li>
+        <li><a href="">Charges</a></li>
+        <li><a href="">Discounts and exemptions</a></li>
+        <li><a href="">Signage and enforcement</a></li>
+      </ul>
+
+    </div>
+
+    <div class="govuk-grid-column-one-third">
+        <h2 class="govuk-heading-m" id="subsection-title">
+            Related links
+          </h2>
+          <nav role="navigation" aria-labelledby="subsection-title">
+            <ul class="govuk-list govuk-!-font-size-16">
+              <li>
+                <a class="govuk-link" href="https://www.gov.uk/government/publications/air-quality-clean-air-zone-framework-for-england" target="_blank">
+                  Clean Air Zone Framework
+                </a>
+              </li>
+            </ul>
+          </nav>
+    </div>
+
+</div>
+
+{% endblock %}
