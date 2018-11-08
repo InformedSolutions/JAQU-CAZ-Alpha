@@ -39,4 +39,14 @@ router.post('/vehicle-checker/leeds/compliance', function (req, res) {
     }
 });
 
+router.post('/task', function (req, res) {
+    var task = req.body['select-task'];
+
+    if (task == 'vehicle-checker') {
+        res.redirect('/vehicle-checker/local-authority')
+    } else {
+        res.redirect('/select-task')
+    }
+});
+
 module.exports = router
