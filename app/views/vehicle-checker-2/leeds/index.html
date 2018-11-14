@@ -1,0 +1,117 @@
+
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Charging Clean Air Zones
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l">
+          Check vehicle compliance: Leeds Clean Air Zone
+        </h1>
+  
+        <div class="govuk-panel govuk-panel--confirmation">
+          <div class="govuk-panel__body">
+            {{ data['vrn'] }}
+          </div>
+          <br>
+          <h1 class="govuk-panel__title">
+            Compliant
+          </h1>
+        </div>
+  
+        <table class="govuk-table">
+          <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell" scope="row"></td>
+              <td class="govuk-table__cell"></td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell" scope="row">Vehicle type</td>
+              <th class="govuk-table__cell">Car</th>
+            </tr>
+            <tr class="govuk-table__row">
+                <td class="govuk-table__cell" scope="row">Vehicle use</td>
+                <th class="govuk-table__cell">Taxi</th>
+              </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell" scope="row">Make</td>
+              <th class="govuk-table__cell">Peugeot</th>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell" scope="row">Colour</td>
+              <th class="govuk-table__cell">Grey</th>
+            </tr>
+            <tr class="govuk-table__row">
+                <td class="govuk-table__cell" scope="row">Euro standard</td>
+                <th class="govuk-table__cell">Euro 4 (petrol)</th>
+              </tr>
+          </tbody>
+        </table>
+  
+        <details class="govuk-details">
+          <summary class="govuk-details__summary">
+            <span class="govuk-details__summary-text">
+              Incorrect Euro standard or classification?
+            </span>
+          </summary>
+          <div class="govuk-details__text">
+            If you believe the vehicle details are incorrect, please write to:
+            <br>
+            <br>
+            Joint Air Quality Unit
+            <br>
+            Department for Environment, Food & Rural Affairs
+            <br>
+            Nobel House, 17 Smith Square
+            <br>
+            London
+            <br>
+            SW1P 3JR
+            <br>
+            <br>
+            You'll need to include your vehicle registration certificate.
+          </div>
+        </details>
+  
+        <div class="govuk-inset-text">
+          You may qualify for discounts or exemptions. Find out more on <a href="">this</a> page.
+        </div>
+
+        <p>Check compliance for another Clean Air Zone Local Authority <a href="/vehicle-checker-2/local-authority">here</a>.</p>
+      
+        <h2 class="govuk-heading-m">Leeds Clean Air Zone</h2>
+
+      <p>Leeds operates a Class B Clean Air Zone, meaning that buses, coaches, taxis and private hire vehicles are subject to a charge if they do not comply with the emission standards.</p>
+
+      <h2 class="govuk-heading-m">
+        Local Authority updates
+      </h2>
+
+      <p>Updates on the Leeds Clean Air Zone can be accessed <a href="">here</a>.</p>
+
+      <h2 class="govuk-heading-m">
+        Find out more
+      </h2>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li><a href="">Leeds Clean Air Zone</a></li>
+        <li><a href="">The benefits of Clean Air Zones</a></li>
+        <li><a href="">Clean Air Zone emissions standards</a></li>
+        <li><a href="">Which vehicles are impacted by the Clean Air Zones</a></li>
+        <li><a href="">Charges</a></li>
+        <li><a href="">Discounts and exemptions</a></li>
+        <li><a href="">Funding and support to upgrade your vehicle</a></li>
+        <li><a href="">Signage and enforcement</a></li>
+      </ul>
+
+    </div>
+
+</div>
+
+{% endblock %}
