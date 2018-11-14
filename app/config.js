@@ -4,7 +4,7 @@
 
 module.exports = {
   // Service name used in header. Eg: 'Renew your passport'
-  serviceName: 'Clean Air Zones',
+  serviceName: 'Service name goes here',
 
   // Default port that prototype runs on
   port: '3000',
@@ -20,7 +20,7 @@ module.exports = {
   useCookieSessionStore: 'false',
 
   // Enable or disable built-in docs and examples.
-  useDocumentation: 'false',
+  useDocumentation: 'true',
 
   // Force HTTP to redirect to HTTPS on production
   useHttps: 'true',
