@@ -1,0 +1,101 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Check vehicle compliance
+{% endblock %}
+
+{% block content %}   
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+    
+      <h1 class="govuk-heading-l">
+        Check vehicle compliance: Birmingham Clean Air Zone
+      </h1>
+
+      <div class="govuk-panel govuk-panel--noncompliant">
+        <div class="govuk-panel__body">
+          {{ data['vrn'] }}
+        </div>
+        <br>
+        <h1 class="govuk-panel__title">
+          Not compliant
+        </h1>
+      </div>
+
+      <div class="govuk-warning-text">
+        <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+        <strong class="govuk-warning-text__text">
+          <span class="govuk-warning-text__assistive">Warning</span>
+          The vehicle with registration '{{ data['vrn'] }}' does not comply with the Birmingham Clean Air Zone, and therefore will be subject to the following charge:
+        </strong>
+      </div>
+      <table class="govuk-table">
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell" scope="row"></td>
+            <td class="govuk-table__cell"></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell" scope="row">Vehicle type</td>
+            <th class="govuk-table__cell">Car</th>
+          </tr>
+          <tr class="govuk-table__row">
+              <td class="govuk-table__cell" scope="row">Vehicle use</td>
+              <th class="govuk-table__cell">Taxi</th>
+            </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell" scope="row">Make</td>
+            <th class="govuk-table__cell">Peugeot</th>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell" scope="row">Colour</td>
+            <th class="govuk-table__cell">Grey</th>
+          </tr>
+          <tr class="govuk-table__row">
+              <td class="govuk-table__cell" scope="row">Euro standard</td>
+              <th class="govuk-table__cell">Euro 4 (petrol)</th>
+            </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell" scope="row">Charge</td>
+            <th class="govuk-table__cell">£10</th>
+          </tr>
+        </tbody>
+      </table>
+
+      <details class="govuk-details">
+        <summary class="govuk-details__summary">
+          <span class="govuk-details__summary-text">
+            Incorrect Euro standard or classification?
+          </span>
+        </summary>
+        <div class="govuk-details__text">
+          If you believe the vehicle details are incorrect, please write to:
+          <br>
+          <br>
+          Joint Air Quality Unit
+          <br>
+          Department for Environment, Food & Rural Affairs
+          <br>
+          Nobel House, 17 Smith Square
+          <br>
+          London
+          <br>
+          SW1P 3JR
+          <br>
+          <br>
+          You'll need to include your vehicle registration certificate.
+        </div>
+      </details>
+
+      <div class="govuk-inset-text">
+        You may qualify for discounts or exemptions. Find out more on <a href="">this</a> page.
+      </div>
+
+      <p>Return to the <a href="/vehicle-checker/birmingham">Birmingham Clean Air Zone</a> page.</p>
+
+    </div>
+</div>
+
+{% endblock %}

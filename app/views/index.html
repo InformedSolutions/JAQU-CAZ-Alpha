@@ -1,44 +1,60 @@
-
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  GOV.UK Prototype Kit
+  Clean Air Zones
 {% endblock %}
 
 {% block content %}
 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
+
       <h1 class="govuk-heading-xl">
-        The GOV.UK Prototype Kit
-        <span class="govuk-caption-xl">{{releaseVersion}}</span>
-      </h1>{{releaseVersion | log }}
-      <p>
-        This kit lets you rapidly create HTML prototypes of GOV.UK services.
-      </p>
+        Clean Air Zones
+      </h1>
 
-      <p>
-        It contains all you need to prototype anything from simple static pages to complex, data-driven transactions.
-      </p>
-
-      <h2 class="govuk-heading-m">About this page</h2>
-
-      <p>We recommend you add links to your prototype to this page, rather than delete it.
-        You'll find this page in the kit at '/app/views/index.html'.</p>
-
-      <p>You can change the service name by editing the file '/app/config.js'.</p>
-
-      <h2 class="govuk-heading-m">Examples and documentation</h2>
+      <p>Use the Clean Air Zones digital service to do the following:</p>
 
       <ul class="govuk-list govuk-list--bullet">
-        <li><a href="/docs/tutorials-and-examples">Example pages and documentation</a></li>
-        <li>
-          <a href="https://design-system.service.gov.uk">
-            GOV.UK Design System
-          </a>
-        </li>
+        <li><a href="/vehicle-checker">Check your vehicle's compliance</a></li>
+        <li><a href="">Pay a charge</a></li>
+        <li><a href="">Pay or appeal a PCN</a></li>
+        <li><a href="">Access your Clean Air Zones account</a></li>
       </ul>
+
+      <h2 class="govuk-heading-m">
+        Find out more
+      </h2>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li><a href="">Clean Air Zones in England</a></li>
+        <li><a href="">The benefits of Clean Air Zones</a></li>
+        <li><a href="">Clean Air Zone emissions standards</a></li>
+        <li><a href="">Which vehicles are impacted by the Clean Air Zones</a></li>
+        <li><a href="">Charges</a></li>
+        <li><a href="">Discounts and exemptions</a></li>
+        <li><a href="">Funding and support to upgrade your vehicle</a></li>
+        <li><a href="">Infrastructure for electric cars in your area</a></li>
+        <li><a href="">Signage and enforcement</a></li>
+      </ul>
+
     </div>
+
+    <div class="govuk-grid-column-one-third">
+        <h2 class="govuk-heading-m" id="subsection-title">
+            Related links
+          </h2>
+          <nav role="navigation" aria-labelledby="subsection-title">
+            <ul class="govuk-list govuk-!-font-size-16">
+              <li>
+                <a class="govuk-link" href="https://www.gov.uk/government/publications/air-quality-clean-air-zone-framework-for-england" target="_blank">
+                  Clean Air Zone Framework
+                </a>
+              </li>
+            </ul>
+          </nav>
+    </div>
+
 </div>
 
 {% endblock %}
