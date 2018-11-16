@@ -11,28 +11,48 @@
     <div class="govuk-grid-column-two-thirds">
       
       <h1 class="govuk-heading-l">
-        Select CAZ Local Authority
+        Select CAZ
       </h1>
 
-      <br>
-
-      <p>Select the CAZ Local Authority for which you would like to check if your vehicle is compliant.</p>
+      <p>Select the CAZ for which you would like to check your vehicle's compliance.</p>
 
       <form method="post" class="form" action="/vehicle-checker/local-authority">
         <div class="govuk-form-group">
-          <label class="govuk-label" for="sort">
-            <b>CAZ Local Authority</b>
-          </label>
-          <select class="govuk-select" id="local-authority" name="local-authority">
-            <option value="birmingham" selected>Birmingham</option>
-            <option value="derby">Derby</option>
-            <option value="leeds">Leeds</option>
-            <option value="nottingham">Nottingham</option>
-            <option value="southampton">Southampton</option>
-          </select>
+          <fieldset class="govuk-fieldset">
+            <div class="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="local-authority-1" name="local-authority" type="radio" value="birmingham">
+                <label class="govuk-label govuk-radios__label" for="local-authority-1">
+                  Birmingham
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="local-authority-2" name="local-authority" type="radio" value="leeds">
+                <label class="govuk-label govuk-radios__label" for="local-authority-2">
+                  Leeds
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="local-authority-3" name="local-authority" type="radio" value="nottingham">
+                <label class="govuk-label govuk-radios__label" for="local-authority-3">
+                  Nottingham
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="local-authority-4" name="local-authority" type="radio" value="sheffield">
+                <label class="govuk-label govuk-radios__label" for="local-authority-4">
+                  Sheffield
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="local-authority-5" name="local-authority" type="radio" value="southampton">
+                <label class="govuk-label govuk-radios__label" for="local-authority-5">
+                  Southampton
+                </label>
+              </div>
+            </div>
+          </fieldset>
         </div>
-
-        <br>
         
         <button type="submit" class="govuk-button">
             Continue
