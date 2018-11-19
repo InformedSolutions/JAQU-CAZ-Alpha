@@ -14,7 +14,7 @@
         Is this your vehicle?
       </h1>
 
-      <p>We have found the following details for the vehicle registration number you have entered. Please confirm if this matches your vehicle.</p>
+      <p>We have found the following details for the registration you entered.</p>
 
       <table class="govuk-table">
         <tbody class="govuk-table__body">
@@ -23,9 +23,13 @@
             <td class="govuk-table__cell"></td>
           </tr>
           <tr class="govuk-table__row">
-            <td class="govuk-table__cell" scope="row">Registration number</td>
+            <td class="govuk-table__cell" scope="row">Registration</td>
             <th class="govuk-table__cell">{{ data['vrn'] }}</td>
           </tr>
+          <tr class="govuk-table__row">
+              <td class="govuk-table__cell" scope="row">Type</td>
+              <th class="govuk-table__cell">Car</td>
+            </tr>
           <tr class="govuk-table__row">
             <td class="govuk-table__cell" scope="row">Make</td>
             <th class="govuk-table__cell">Peugeot</td>
@@ -34,12 +38,25 @@
             <td class="govuk-table__cell" scope="row">Colour</td>
             <th class="govuk-table__cell">Grey</th>
           </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell" scope="row">Use</td>
+            <th class="govuk-table__cell">Taxi</th>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell" scope="row">Emissions standard</td>
+            <th class="govuk-table__cell">Euro XX (petrol/diesel)</th>
+          </tr>
         </tbody>
       </table>
 
-      <form method="post" class="form" action="/vehicle-checker/birmingham/compliance">
+      <form method="post" class="form" action="/vehicle-checker/compliance">
         <div class="govuk-form-group">
           <fieldset class="govuk-fieldset" aria-describedby="confirm-vehicle-hint">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+              <h1 class="govuk-fieldset__heading">
+                Does all this information match your vehicle?
+              </h1>
+            </legend>
             <div class="govuk-radios govuk-radios--inline">
               <div class="govuk-radios__item">
                 <input class="govuk-radios__input" id="confirm-vehicle-1" name="confirm-vehicle" type="radio" value="yes">
@@ -50,37 +67,12 @@
               <div class="govuk-radios__item">
                 <input class="govuk-radios__input" id="confirm-vehicle-2" name="confirm-vehicle" type="radio" value="no">
                 <label class="govuk-label govuk-radios__label" for="confirm-vehicle-2">
-                  No, search again
+                  No
                 </label>
               </div>
             </div>
           </fieldset>
         </div>
-
-        <details class="govuk-details">
-          <summary class="govuk-details__summary">
-            <span class="govuk-details__summary-text">
-              Incorrect vehicle details?
-            </span>
-          </summary>
-          <div class="govuk-details__text">
-            If you believe the vehicle details are incorrect, please write to:
-            <br>
-            <br>
-            Joint Air Quality Unit
-            <br>
-            Department for Environment, Food & Rural Affairs
-            <br>
-            Nobel House, 17 Smith Square
-            <br>
-            London
-            <br>
-            SW1P 3JR
-            <br>
-            <br>
-            You'll need to include your vehicle registration certificate.
-          </div>
-        </details>
 
         <button type="submit" class="govuk-button">
             Confirm
