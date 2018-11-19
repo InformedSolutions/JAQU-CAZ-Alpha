@@ -25,7 +25,7 @@ router.post('/vehicle-checker/compliance', function (req, res) {
     if (confirm == 'yes') {
         res.redirect('/vehicle-checker/local-authority')
     } else if (confirm == 'no') {
-        res.redirect('/vehicle-checker/enter-vehicle-details')
+        res.redirect('/vehicle-checker/incorrect-details')
     }
 });
 
