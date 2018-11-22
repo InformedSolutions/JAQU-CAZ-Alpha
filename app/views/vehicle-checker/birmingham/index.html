@@ -15,7 +15,7 @@
         Birmingham CAZ compliance
       </h1>
   
-      <div class="govuk-panel govuk-panel--noncompliant">
+      <div class="govuk-panel govuk-panel--noncompliantamber">
         <h1 class="govuk-panel__title">
           Not compliant
         </h1>
@@ -23,7 +23,19 @@
 
       <br>
 
-      <p>The vehicle with registration {{ data['vrn'] }} must pay £XX per day to enter the <a href="">Birmingham CAZ</a>.</p>
+      <details class="govuk-details">
+        <summary class="govuk-details__summary">
+          <span class="govuk-details__summary-text">
+            Why am I not compliant?
+          </span>
+        </summary>
+        <div class="govuk-details__text">
+          Your vehicle does not meet the required standards, to find out more go here:
+        </div>
+      </details>
+
+      <p>The tariff to enter the Birmingham Clean Air Zone is £10 but you may be eligible for a discount or an exemption.</p>
+      <p>Find out all the discounts and exemptions by heading to the  <a href="">Birmingham CAZ</a> website.</p>
   
       <h2 class="govuk-heading-m">
         Next steps
