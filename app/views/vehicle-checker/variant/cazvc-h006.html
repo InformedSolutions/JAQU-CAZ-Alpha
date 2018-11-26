@@ -1,0 +1,45 @@
+
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Charging Clean Air Zones
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l">
+        Birmingham CAZ compliance
+      </h1>
+    
+      <div class="govuk-panel govuk-panel--noncompliant">
+        <h1 class="govuk-panel__title">
+          Not compliant
+        </h1>
+      </div>
+
+
+      <br>
+
+      <p>The vehicle with registration {{ data['vrn'] }} may be liable for a charge to enter the Birmingham Clean Air Zone.</p>
+      <p>The tariff for this vehicle to enter the Birmingham CAZ is £XX, but you may be eligible for a <a href="">discount</a> or an <a href="">exemption</a>.</p>
+      <p>If you wish to avoid the charge, you can <a href="">become compliant</a>, and you may qualify for <a href="">financial assistance</a> to help you do so.</p>
+      
+
+      <h2 class="govuk-heading-m">
+        Next steps
+      </h2>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li><a href="">Pay a CAZ charge</a></li>
+        <li><a href="/vehicle-checker/local-authority">Check this vehicle's compliance for another CAZ</a></li>
+        <li><a href="/vehicle-checker/enter-vehicle-details">Check another vehicle's compliance</a></li>
+      </ul>
+      </div>
+
+</div>
+
+{% endblock %}
