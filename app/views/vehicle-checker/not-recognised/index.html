@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Check vehicle compliance
+{% endblock %}
+
+{% block content %}   
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-l">Vehicle details could not be found</h1>
+            <p>Vehicle details could not be found as it has not been possible to locate the vehicle details. This may be because:</p>
+            <ul class="govuk-list govuk-list--bullet">
+                <li>Your vehicle is not registered with the DVLA</li>
+                <li>Your vehicle is not registered in the United Kingdom</li>
+            </ul>
+            <p>If you want to check the vehicle record held by the DVLA please contact vehicle enquiries:</p>
+            <p>Phone: 0300 790 6802</br>Email: Send an email</p>
+            <p><a href="/vehicle-checker/enter-vehicle-details">Search again</a></p>
+    </div>
+</div>
+
+{% endblock %}
