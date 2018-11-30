@@ -2,6 +2,13 @@
 
 {% extends "layout.html" %}
 
+{% block beforeContent %}
+{{ govukBackLink({
+href: "/vehicle-checker/compliancePage",
+text: "Back"
+}) }}
+{% endblock %}
+
 {% block pageTitle %}
   Charging Clean Air Zones
 {% endblock %}
@@ -13,39 +20,49 @@
       <ol class="app-task-list">
         <li>
           <h2 class="app-task-list__section">
-            <span class="app-task-list__section-number"></span> Local authorities
+            <span class="app-task-list__section-number"></span> Clean air zones
           </h2>
           <ul class="app-task-list__items">
+            {% if birminghamShow %}
             <li class="app-task-list__item">
               <a class="app-task-list__task-name" href="#" aria-describedby="company-information-completed">
                 Birmingham
               </a>
-              <strong class="govuk-tag--compliant app-task-list__task-completed" id="company-information-completed">Compliant</strong>
+              <strong class="govuk-tag--noncompliant app-task-list__task-completed" id="company-information-completed">Not Compliant</strong>
             </li>
+            {% endif %}
+            {% if derbyShow %}
             <li class="app-task-list__item">
               <a class="app-task-list__task-name" href="#" aria-describedby="contact-details-completed">
-                Leeds
+                Derby
               </a>
               <strong class="govuk-tag--compliant app-task-list__task-completed" id="contact-details-completed">Compliant</strong>
             </li>
+            {% endif %}
+            {% if leedsShow %}
             <li class="app-task-list__item">
               <a class="app-task-list__task-name" href="#">
-                Derby
-              </a>
-              <strong class="govuk-tag--noncompliant app-task-list__task-completed" id="medical-information-completed">Not Compliant</strong>
-            </li>
-            <li class="app-task-list__item">
-              <a class="app-task-list__task-name" href="#">
-                Southampton
-              </a>
-              <strong class="govuk-tag--noncompliant app-task-list__task-completed" id="medical-information-completed">Not compliant</strong>
-            </li>
-            <li class="app-task-list__item">
-              <a class="app-task-list__task-name" href="#" aria-describedby="medical-information-completed">
-                Nottingham
+                Leeds
               </a>
               <strong class="govuk-tag--compliant app-task-list__task-completed" id="medical-information-completed">Compliant</strong>
             </li>
+            {% endif %}
+            {% if nottinghamShow %}
+            <li class="app-task-list__item">
+              <a class="app-task-list__task-name" href="#">
+                Nottingham
+              </a>
+              <strong class="govuk-tag--noncompliant app-task-list__task-completed" id="medical-information-completed">Not compliant</strong>
+            </li>
+            {% endif %}
+            {% if southamptonShow %}
+            <li class="app-task-list__item">
+              <a class="app-task-list__task-name" href="#" aria-describedby="medical-information-completed">
+                Southampton
+              </a>
+              <strong class="govuk-tag--compliant app-task-list__task-completed" id="medical-information-completed">Compliant</strong>
+            </li>
+            {% endif %}
           </ul>
         </li>
       </ol>
@@ -75,7 +92,6 @@
           </table> -->
 
     </div>
-
 
 </div>
 

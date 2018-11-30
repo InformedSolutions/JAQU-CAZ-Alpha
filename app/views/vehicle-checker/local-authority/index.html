@@ -1,6 +1,13 @@
 
 {% extends "layout.html" %}
 
+{% block beforeContent %}
+{{ govukBackLink({
+href: "/vehicle-checker/confirm",
+text: "Back"
+}) }}
+{% endblock %}
+
 {% block pageTitle %}
   Check vehicle compliance
 {% endblock %}

@@ -2,6 +2,13 @@
 
 {% extends "layout.html" %}
 
+{% block beforeContent %}
+{{ govukBackLink({
+href: "/vehicle-checker/local-authority",
+text: "Back"
+}) }}
+{% endblock %}
+
 {% block pageTitle %}
   Charging Clean Air Zones
 {% endblock %}
