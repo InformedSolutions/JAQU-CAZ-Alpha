@@ -37,7 +37,7 @@ text: "Back"
           </select>
         </div> -->
 
-        <div class="govuk-form-group">
+        <!-- <div class="govuk-form-group">
           <fieldset class="govuk-fieldset" aria-describedby="cazHint">
             <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
               <h1 class="govuk-fieldset__heading">
@@ -80,7 +80,88 @@ text: "Back"
               </div>
             </div>
           </fieldset>
-        </div>
+        </div> -->
+        <div class="govuk-tabs" data-module="tabs">
+            <h2 class="govuk-tabs__title">
+              Contents
+            </h2>
+          
+            <ul class="govuk-tabs__list">
+              <li class="govuk-tabs__list-item">
+                <a class="govuk-tabs__tab govuk-tabs__tab--selected" href="#A-D">
+                  A-D
+                </a>
+              </li>
+              <li class="govuk-tabs__list-item">
+                <a class="govuk-tabs__tab" href="#E-H">
+                  E-H
+                </a>
+              </li>
+              <li class="govuk-tabs__list-item">
+                <a class="govuk-tabs__tab" href="#I-L">
+                  I-L
+                </a>
+              </li>
+              <li class="govuk-tabs__list-item">
+                <a class="govuk-tabs__tab" href="#M-P">
+                  M-P
+                </a>
+              </li>
+            </ul>
+          
+            <section class="govuk-tabs__panel" id="A-D">
+              <h2 class="govuk-heading-l">A-D</h2>
+              <div class="govuk-checkboxes">
+                  <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="caz-1" name="caz-1" type="checkbox" value="birmingham">
+                      <label class="govuk-label govuk-checkboxes__label" for="caz-1">
+                        Birmingham
+                      </label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="caz-2" name="caz-2" type="checkbox" value="derby">
+                        <label class="govuk-label govuk-checkboxes__label" for="caz-2">
+                          Derby
+                        </label>
+                      </div>
+                  
+                </div>
+          
+            </section>
+            <section class="govuk-tabs__panel govuk-tabs__panel--hidden" id="E-H">
+              <h2 class="govuk-heading-l">E-H</h2>
+              <div class="govuk-checkboxes">
+                  
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="caz-3" name="caz-3" type="checkbox" value="leeds">
+                    <label class="govuk-label govuk-checkboxes__label" for="caz-3">
+                      Leeds
+                    </label>
+                  </div>
+                  <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="caz-4" name="caz-4" type="checkbox" value="nottingham">
+                      <label class="govuk-label govuk-checkboxes__label" for="caz-4">
+                        Nottingham
+                      </label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="caz-5" name="caz-5" type="checkbox" value="southampton">
+                      <label class="govuk-label govuk-checkboxes__label" for="caz-5">
+                        Southampton
+                      </label>
+                    </div>
+                </div>
+          
+            </section>
+            <section class="govuk-tabs__panel govuk-tabs__panel--hidden" id="I-L">
+              <h2 class="govuk-heading-l">I-L</h2>
+          
+            </section>
+            <section class="govuk-tabs__panel govuk-tabs__panel--hidden" id="M-P">
+              <h2 class="govuk-heading-l">M-P</h2>
+          
+            </section>
+          </div>
         
         <button type="submit" class="govuk-button">
             Continue
