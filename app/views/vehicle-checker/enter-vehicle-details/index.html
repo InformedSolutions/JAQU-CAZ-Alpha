@@ -1,6 +1,13 @@
 
 {% extends "layout.html" %}
 
+{% block beforeContent %}
+{{ govukBackLink({
+href: "/vehicle-checker",
+text: "Back"
+}) }}
+{% endblock %}
+
 {% block pageTitle %}
   Check vehicle compliance
 {% endblock %}
@@ -10,7 +17,7 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-      <h2 class="govuk-heading-m">Enter the registration of the vehicle you wish to check</h2>
+      <h1 class="govuk-heading-l">Enter the registration of the vehicle you wish to check</h1>
       <form action="/vehicle-checker/confirm">
         <div class="govuk-form-group">
           <label class="govuk-label" for="vrn">
@@ -20,16 +27,6 @@
             For example, CU57ABC
           </span>
           <input class="govuk-input govuk-input--width-10" id="vrn" name="vrn" type="text" value="{{ data['vrn'] }}">
-        </div>
-
-        <div class="govuk-form-group">
-          <label class="govuk-label" for="country-of-registration">
-            Country of registration
-          </label>
-          <select class="govuk-select govuk-select" id="country-of-registration" name="country-of-registration">
-            <option value="uk">United Kingdom</option>
-            <option value="other">Other</option>
-          </select>
         </div>
 
         <br>

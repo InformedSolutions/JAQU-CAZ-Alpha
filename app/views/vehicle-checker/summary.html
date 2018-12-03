@@ -1,0 +1,98 @@
+
+
+{% extends "layout.html" %}
+
+{% block beforeContent %}
+{{ govukBackLink({
+href: "/vehicle-checker/compliancePage",
+text: "Back"
+}) }}
+{% endblock %}
+
+{% block pageTitle %}
+  Charging Clean Air Zones
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <ol class="app-task-list">
+        <li>
+          <h2 class="app-task-list__section">
+            <span class="app-task-list__section-number"></span> Clean air zones
+          </h2>
+          <ul class="app-task-list__items">
+            {% if birminghamShow %}
+            <li class="app-task-list__item">
+              <a class="app-task-list__task-name" href="#" aria-describedby="company-information-completed">
+                Birmingham
+              </a>
+              <strong class="govuk-tag--noncompliant app-task-list__task-completed" id="company-information-completed">Not Compliant</strong>
+            </li>
+            {% endif %}
+            {% if derbyShow %}
+            <li class="app-task-list__item">
+              <a class="app-task-list__task-name" href="#" aria-describedby="contact-details-completed">
+                Derby
+              </a>
+              <strong class="govuk-tag--compliant app-task-list__task-completed" id="contact-details-completed">Compliant</strong>
+            </li>
+            {% endif %}
+            {% if leedsShow %}
+            <li class="app-task-list__item">
+              <a class="app-task-list__task-name" href="#">
+                Leeds
+              </a>
+              <strong class="govuk-tag--compliant app-task-list__task-completed" id="medical-information-completed">Compliant</strong>
+            </li>
+            {% endif %}
+            {% if nottinghamShow %}
+            <li class="app-task-list__item">
+              <a class="app-task-list__task-name" href="#">
+                Nottingham
+              </a>
+              <strong class="govuk-tag--noncompliant app-task-list__task-completed" id="medical-information-completed">Not compliant</strong>
+            </li>
+            {% endif %}
+            {% if southamptonShow %}
+            <li class="app-task-list__item">
+              <a class="app-task-list__task-name" href="#" aria-describedby="medical-information-completed">
+                Southampton
+              </a>
+              <strong class="govuk-tag--compliant app-task-list__task-completed" id="medical-information-completed">Compliant</strong>
+            </li>
+            {% endif %}
+          </ul>
+        </li>
+      </ol>
+
+      <!-- <table class="govuk-table">
+            <caption class="govuk-table__caption">Summary</caption>
+            <thead class="govuk-table__head">
+              <tr class="govuk-table__row">
+                <th class="govuk-table__header" scope="col">CAZ</th>
+                <th class="govuk-table__header" scope="col">Compliance</th>
+              </tr>
+            </thead>
+            <tbody class="govuk-table__body">
+              <tr class="govuk-table__row">
+                <th class="govuk-table__header" scope="row">Birmingham</th>
+                <td class="govuk-table__cell">Compliant</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <th class="govuk-table__header" scope="row">Leeds</th>
+                <td class="govuk-table__cell">Subject to charge</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <th class="govuk-table__header" scope="row">Nottingham</th>
+                <td class="govuk-table__cell">Compliant</td>
+              </tr>
+            </tbody>
+          </table> -->
+
+    </div>
+
+</div>
+
+{% endblock %}
