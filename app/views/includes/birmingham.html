@@ -4,9 +4,17 @@
     
 {% include "includes/notCompliant.html" %}
 
-
 <br>
 
-<p>The vehicle with registration {{ data['vrn'] }} does not comply with the <a href="">Birmingham CAZ emissions standards</a> and therefore it is subject to a daily charge.</p>
-<p>The tariff for this vehicle to travel in the Birmingham CAZ is £10 unless you qualify for a <a href="">discount</a> or an <a href="">exemption</a>.</p>
+<p>The vehicle with registration {{ data['vrn'] }} does not comply with the <a href="">Birmingham CAZ emissions standards</a>.</p>
+
+<h2 class="govuk-heading-m">
+    Next steps
+</h2>
+
+<ul class="govuk-list govuk-list--bullet">
+    <li><a href="">Find out how much the Birmingham CAZ charge is</a></li>
+    <li><a href="">Find out if you qualify for an exemption or discount</a></li>
+</ul>
+
 <p>If you wish to avoid the charge, you can <a href="">become compliant</a>, and you may qualify for <a href="">financial assistance</a> to help you do so.</p>
