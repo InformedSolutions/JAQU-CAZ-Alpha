@@ -16,26 +16,8 @@ text: "Back"
 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-      
-      <!-- <h1 class="govuk-heading-l">
-        Select CAZ
-      </h1> -->
-
-      <!-- <p>Select the CAZ for which you would like to check your vehicle's compliance.</p> -->
 
       <form method="post" class="form" action="/vehicle-checker/compliancePage">
-        <!-- <div class="govuk-form-group">
-          <label class="govuk-label" for="sort">
-            <b>CAZ Local Authority</b>
-          </label>
-          <select class="govuk-select" id="local-authority" name="local-authority">
-            <option value="birmingham" selected>Birmingham</option>
-            <option value="derby">Derby</option>
-            <option value="leeds">Leeds</option>
-            <option value="nottingham">Nottingham</option>
-            <option value="southampton">Southampton</option>
-          </select>
-        </div> -->
 
         <div class="govuk-form-group">
           <fieldset class="govuk-fieldset" aria-describedby="cazHint">
@@ -48,39 +30,136 @@ text: "Back"
               Select all the CAZs for which you would like to check your vehicle’s compliance.
             </span>
             <div class="govuk-checkboxes">
+              <!-- <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="caz-1" name="caz-1" type="checkbox" value="bath">
+                <label class="govuk-label govuk-checkboxes__label" for="caz-1">
+                  Bath and North East Somerset
+                </label>
+              </div> -->
               <div class="govuk-checkboxes__item">
                 <input class="govuk-checkboxes__input" id="caz-1" name="caz-1" type="checkbox" value="birmingham">
                 <label class="govuk-label govuk-checkboxes__label" for="caz-1">
                   Birmingham
                 </label>
               </div>
-              <div class="govuk-checkboxes__item">
-                <input class="govuk-checkboxes__input" id="caz-2" name="caz-2" type="checkbox" value="derby">
-                <label class="govuk-label govuk-checkboxes__label" for="caz-2">
-                  Derby
+              <!-- <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="caz-1" name="caz-1" type="checkbox" value="bolton">
+                <label class="govuk-label govuk-checkboxes__label" for="caz-1">
+                  Bolton
                 </label>
               </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="caz-1" name="caz-1" type="checkbox" value="bristol">
+                <label class="govuk-label govuk-checkboxes__label" for="caz-1">
+                  Bristol
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="caz-1" name="caz-1" type="checkbox" value="bury">
+                <label class="govuk-label govuk-checkboxes__label" for="caz-1">
+                  Bury
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="caz-1" name="caz-1" type="checkbox" value="coventry">
+                <label class="govuk-label govuk-checkboxes__label" for="caz-1">
+                  Coventry
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="caz-3" name="caz-3" type="checkbox" value="fareham">
+                <label class="govuk-label govuk-checkboxes__label" for="caz-3">
+                  Fareham
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="caz-3" name="caz-3" type="checkbox" value="gateshead">
+                <label class="govuk-label govuk-checkboxes__label" for="caz-3">
+                  Gateshead
+                </label>
+              </div> -->
               <div class="govuk-checkboxes__item">
                 <input class="govuk-checkboxes__input" id="caz-3" name="caz-3" type="checkbox" value="leeds">
                 <label class="govuk-label govuk-checkboxes__label" for="caz-3">
                   Leeds
                 </label>
               </div>
-              <div class="govuk-checkboxes__item">
-                <input class="govuk-checkboxes__input" id="caz-4" name="caz-4" type="checkbox" value="nottingham">
-                <label class="govuk-label govuk-checkboxes__label" for="caz-4">
-                  Nottingham
+              <!-- <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="caz-3" name="caz-3" type="checkbox" value="manchester">
+                <label class="govuk-label govuk-checkboxes__label" for="caz-3">
+                  Manchester
                 </label>
               </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="caz-3" name="caz-3" type="checkbox" value="middlesbrough">
+                <label class="govuk-label govuk-checkboxes__label" for="caz-3">
+                  Middlesbrough
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="caz-3" name="caz-3" type="checkbox" value="new-forest">
+                <label class="govuk-label govuk-checkboxes__label" for="caz-3">
+                  New Forest
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="caz-3" name="caz-3" type="checkbox" value="newcastle">
+                <label class="govuk-label govuk-checkboxes__label" for="caz-3">
+                  Newcastle-upon-Tyne
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="caz-3" name="caz-3" type="checkbox" value="north-tyneside">
+                <label class="govuk-label govuk-checkboxes__label" for="caz-3">
+                  North Tyneside
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="caz-3" name="caz-3" type="checkbox" value="salford">
+                <label class="govuk-label govuk-checkboxes__label" for="caz-3">
+                  Salford
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="caz-5" name="caz-5" type="checkbox" value="sheffield">
+                <label class="govuk-label govuk-checkboxes__label" for="caz-5">
+                  Sheffield
+                </label>
+              </div> -->
               <div class="govuk-checkboxes__item">
                 <input class="govuk-checkboxes__input" id="caz-5" name="caz-5" type="checkbox" value="southampton">
                 <label class="govuk-label govuk-checkboxes__label" for="caz-5">
                   Southampton
                 </label>
               </div>
+              <!-- <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="caz-3" name="caz-3" type="checkbox" value="stockport">
+                <label class="govuk-label govuk-checkboxes__label" for="caz-3">
+                  Stockport
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="caz-5" name="caz-5" type="checkbox" value="rotherham">
+                <label class="govuk-label govuk-checkboxes__label" for="caz-5">
+                  Rotherham
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="caz-3" name="caz-3" type="checkbox" value="tameside">
+                <label class="govuk-label govuk-checkboxes__label" for="caz-3">
+                  Tameside
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="caz-3" name="caz-3" type="checkbox" value="trafford">
+                <label class="govuk-label govuk-checkboxes__label" for="caz-3">
+                  Trafford
+                </label>
+              </div> -->
             </div>
           </fieldset>
         </div>
+        
         <!-- <div class="govuk-tabs" data-module="tabs">
             <h2 class="govuk-tabs__title">
               Contents
