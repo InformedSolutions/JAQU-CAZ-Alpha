@@ -22,6 +22,28 @@ text: "Back"
 
       <p>The vehicle with registration {{ data['vrn'] }} has been identified as having a <b>Euro 4</b> emissions standard, and has not been retrofitted.</p>
 
+      <details class="govuk-details">
+          <summary class="govuk-details__summary">
+            <span class="govuk-details__summary-text">
+              Incorrect vehicle details?
+            </span>
+          </summary>
+          <div class="govuk-details__text">
+            <p>If you think any of the vehicle details are incorrect, please write to:
+              <br>
+              <br>
+              Driver and Vehicle Licensing Agency (DVLA)
+              <br>
+              Swansea
+              <br>
+              SA99 1BA
+              <br>
+              <br>
+              You'll need to include your vehicle registration certificate.
+            </p>
+          </div>
+        </details>
+
       {% if birminghamShow %}
         {% include "includes/birmingham.html" %}
       {% endif %}
