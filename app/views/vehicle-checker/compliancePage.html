@@ -17,6 +17,11 @@ text: "Back"
 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l">Clean Air Zone compliance</h1>
+
+      <p>The vehicle with registration {{ data['vrn'] }} has been identified as having a <b>Euro 4</b> emissions standard, and has not been retrofitted.</p>
+
       {% if birminghamShow %}
         {% include "includes/birmingham.html" %}
       {% endif %}
@@ -46,9 +51,9 @@ text: "Back"
       </h2>
 
       <ul class="govuk-list govuk-list--bullet">
-        <li><a href="">Find out how to avoid the charge in the future</a></li>
         <li><a href="/vehicle-checker/local-authority">Check this vehicle's compliance for another CAZ</a></li>
         <li><a href="/vehicle-checker/enter-vehicle-details">Check another vehicle's compliance</a></li>
+        <li><a href="">Find out about alternative travel options</a></li>
       </ul>
     </div>
 
