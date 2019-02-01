@@ -50,7 +50,13 @@ router.post('/vehicle-checker/compliancePage', function (req, res) {
     req.session.leedsShow = false;
   }
 
-  if (req.session.data['caz-4'] == "southampton"){
+  if (req.session.data['caz-4'] == "sheffield"){
+    req.session.sheffieldShow = true;
+  } else {
+    req.session.sheffieldShow = false;
+  }
+
+  if (req.session.data['caz-5'] == "southampton"){
     req.session.southamptonShow = true;
   } else {
     req.session.southamptonShow = false;
@@ -61,6 +67,7 @@ router.post('/vehicle-checker/compliancePage', function (req, res) {
       bathShow: req.session.bathShow,
       birminghamShow: req.session.birminghamShow,
       leedsShow: req.session.leedsShow,
+      sheffieldShow: req.session.sheffieldShow,
       southamptonShow: req.session.southamptonShow
   });
 
@@ -87,7 +94,13 @@ router.get('/vehicle-checker/compliancePage', function (req, res) {
     req.session.leedsShow = false;
   }
 
-  if (req.session.data['caz-4'] == "southampton"){
+  if (req.session.data['caz-4'] == "sheffield"){
+    req.session.sheffieldShow = true;
+  } else {
+    req.session.sheffieldShow = false;
+  }
+
+  if (req.session.data['caz-5'] == "southampton"){
     req.session.southamptonShow = true;
   } else {
     req.session.southamptonShow = false;
@@ -98,6 +111,7 @@ router.get('/vehicle-checker/compliancePage', function (req, res) {
       bathShow: req.session.bathShow,
       birminghamShow: req.session.birminghamShow,
       leedsShow: req.session.leedsShow,
+      sheffieldShow: req.session.sheffieldShow,
       southamptonShow: req.session.southamptonShow
   });
   
@@ -105,16 +119,16 @@ router.get('/vehicle-checker/compliancePage', function (req, res) {
 
 router.get('/vehicle-checker/summary', function (req, res) {
   // Complete tag
-  if (req.session.data['caz-1'] == "birmingham"){
+  if (req.session.data['caz-1'] == "bath"){
+    req.session.bathShow = true;
+  } else {
+    req.session.bathShow = false;
+  }
+
+  if (req.session.data['caz-2'] == "birmingham"){
     req.session.birminghamShow = true;
   } else {
     req.session.birminghamShow = false;
-  }
-
-  if (req.session.data['caz-2'] == "derby"){
-    req.session.derbyShow = true;
-  } else {
-    req.session.derbyShow = false;
   }
 
   if (req.session.data['caz-3'] == "leeds"){
@@ -123,10 +137,10 @@ router.get('/vehicle-checker/summary', function (req, res) {
     req.session.leedsShow = false;
   }
 
-  if (req.session.data['caz-4'] == "nottingham"){
-    req.session.nottinghamShow = true;
+  if (req.session.data['caz-4'] == "sheffield"){
+    req.session.sheffieldShow = true;
   } else {
-    req.session.nottinghamShow = false;
+    req.session.sheffieldShow = false;
   }
 
   if (req.session.data['caz-5'] == "southampton"){
@@ -135,14 +149,13 @@ router.get('/vehicle-checker/summary', function (req, res) {
     req.session.southamptonShow = false;
   }
 
-
-res.render('vehicle-checker/summary', {
-  optional: true,
-  birminghamShow: req.session.birminghamShow,
-  leedsShow: req.session.leedsShow,
-  derbyShow: req.session.derbyShow,
-  nottinghamShow: req.session.nottinghamShow,
-  southamptonShow: req.session.southamptonShow
-});
+  res.render('vehicle-checker/summary', {
+    optional: true,
+    bathShow: req.session.bathShow,
+    birminghamShow: req.session.birminghamShow,
+    leedsShow: req.session.leedsShow,
+    sheffieldShow: req.session.sheffieldShow,
+    southamptonShow: req.session.southamptonShow
+  });
 });
 module.exports = router
