@@ -55,20 +55,13 @@ router.post('/vehicle-checker/compliancePage', function (req, res) {
   } else {
     req.session.sheffieldShow = false;
   }
-
-  if (req.session.data['caz-5'] == "southampton"){
-    req.session.southamptonShow = true;
-  } else {
-    req.session.southamptonShow = false;
-  }
   
   res.render('vehicle-checker/compliancePage', {
       optional: true,
       bathShow: req.session.bathShow,
       birminghamShow: req.session.birminghamShow,
       leedsShow: req.session.leedsShow,
-      sheffieldShow: req.session.sheffieldShow,
-      southamptonShow: req.session.southamptonShow
+      sheffieldShow: req.session.sheffieldShow
   });
 
 });
@@ -99,20 +92,13 @@ router.get('/vehicle-checker/compliancePage', function (req, res) {
   } else {
     req.session.sheffieldShow = false;
   }
-
-  if (req.session.data['caz-5'] == "southampton"){
-    req.session.southamptonShow = true;
-  } else {
-    req.session.southamptonShow = false;
-  }
   
   res.render('vehicle-checker/compliancePage', {
       optional: true,
       bathShow: req.session.bathShow,
       birminghamShow: req.session.birminghamShow,
       leedsShow: req.session.leedsShow,
-      sheffieldShow: req.session.sheffieldShow,
-      southamptonShow: req.session.southamptonShow
+      sheffieldShow: req.session.sheffieldShow
   });
   
 });
@@ -143,19 +129,14 @@ router.get('/vehicle-checker/summary', function (req, res) {
     req.session.sheffieldShow = false;
   }
 
-  if (req.session.data['caz-5'] == "southampton"){
-    req.session.southamptonShow = true;
-  } else {
-    req.session.southamptonShow = false;
-  }
-
   res.render('vehicle-checker/summary', {
     optional: true,
     bathShow: req.session.bathShow,
     birminghamShow: req.session.birminghamShow,
     leedsShow: req.session.leedsShow,
-    sheffieldShow: req.session.sheffieldShow,
-    southamptonShow: req.session.southamptonShow
+    sheffieldShow: req.session.sheffieldShow
   });
+
 });
+
 module.exports = router
