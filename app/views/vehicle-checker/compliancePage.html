@@ -43,21 +43,17 @@ text: "Back"
             </p>
           </div>
         </details>
+      
+      {% if bathShow %}
+        {% include "includes/bath.html" %}
+      {% endif %}
 
       {% if birminghamShow %}
         {% include "includes/birmingham.html" %}
       {% endif %}
 
-      {% if derbyShow %}
-        {% include "includes/derby.html" %}
-      {% endif %}
-
       {% if leedsShow %}
         {% include "includes/leeds.html" %}
-      {% endif %}
-
-      {% if nottinghamShow %}
-        {% include "includes/nottingham.html" %}
       {% endif %}
 
       {% if southamptonShow %}
