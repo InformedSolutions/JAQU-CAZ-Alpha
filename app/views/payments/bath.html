@@ -16,8 +16,9 @@ Check vehicle compliance
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
         <h1 class="govuk-heading-l">Make a payment for the Bath Clean Air Zone</h1>
-        <h2 class="govuk-heading-m">The tariff for your vehicle is: £5</h2>
-        <form method="post" class="form" action="/payments/paymentPages">
+        <h2 class="govuk-heading-m">The tariff for your vehicle is:</h2>
+        <p id="charge" name="charge">£5.00</p>
+        <!-- <form method="post" class="form" action="/payments/paymentPages"> -->
             <div class="govuk-form-group">
                 <fieldset class="govuk-fieldset" aria-describedby="discountSelection-hint">
                     <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
@@ -31,7 +32,7 @@ Check vehicle compliance
                     <div class="govuk-checkboxes" data-module="checkboxes">
                         <div class="govuk-checkboxes__item">
                             <input class="govuk-checkboxes__input" id="discountSelection-1" name="blueBadge"
-                                type="checkbox" value="email" data-aria-controls="conditional-discountSelection-1">
+                                type="checkbox" value="blue-badge" data-aria-controls="conditional-discountSelection-1">
                             <label class="govuk-label govuk-checkboxes__label" for="discountSelection-1">
                                 I'm a blue badge holder
                             </label>
@@ -41,12 +42,10 @@ Check vehicle compliance
                             <label class="govuk-label" for="contact-by-email">
                                 You do not have to pay a charge
                             </label>
-
-
                         </div>
                         <div class="govuk-checkboxes__item">
                             <input class="govuk-checkboxes__input" id="discountSelection-2" name="citizen"
-                                type="checkbox" value="phone" data-aria-controls="conditional-discountSelection-2">
+                                type="checkbox" value="bath-resident" data-aria-controls="conditional-discountSelection-2">
                             <label class="govuk-label govuk-checkboxes__label" for="discountSelection-2">
                                 I am a resident of Bath
                             </label>
@@ -57,7 +56,7 @@ Check vehicle compliance
                                 You will receive a 50% discount
                             </label>
                         </div>
-                        <button type="" class="govuk-button">
+                        <button type="button" class="govuk-button" onclick="changeCharge()">
                             Calculate cost
                         </button>
 
@@ -78,11 +77,23 @@ Check vehicle compliance
             <button type="submit" class="govuk-button">
                 Pay by credit or debit
             </button>
-        </form>
+        <!-- </form> -->
 
+        <script>
+            function changeCharge() {
 
+                var charge = document.getElementById("charge").innerHTML;
 
+                if (document.getElementById("discountSelection-1").checked == true) {
 
+                    charge = "£0.00"
+
+                }
+
+                document.getElementById("charge").innerHTML = charge;
+
+            }
+        </script>
 
     </div>
 </div>
