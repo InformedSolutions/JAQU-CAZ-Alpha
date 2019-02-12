@@ -1,0 +1,39 @@
+
+{% extends "layout.html" %}
+
+{% block beforeContent %}
+{{ govukBackLink({
+href: "/",
+text: "Back"
+}) }}
+{% endblock %}
+
+{% block pageTitle %}
+  Check vehicle compliance
+{% endblock %}
+
+{% block content %}   
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l">Enter the registration of the vehicle you wish to check</h1>
+      <form action="/payments/confirm-vehicle-details">
+        <div class="govuk-form-group">
+          <span id="vrn-hint" class="govuk-hint">
+            For example, CU57ABC
+          </span>
+          <input class="govuk-input govuk-input--width-10" id="vrn" name="vrn" type="text" value="{{ data['vrn'] }}">
+        </div>
+
+        <br>
+        
+        <button type="submit" class="govuk-button">
+            Continue
+        </button>
+      </form>
+
+    </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,69 @@
+
+{% extends "layout.html" %}
+
+{% block beforeContent %}
+{{ govukBackLink({
+href: "/vehicle-checker/confirm",
+text: "Back"
+}) }}
+{% endblock %}
+
+{% block pageTitle %}
+  Check vehicle compliance
+{% endblock %}
+
+{% block content %}   
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form method="post" class="form" action="/payments/paymentPages">
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" aria-describedby="cazHint">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+              <h1 class="govuk-fieldset__heading">
+                Clean Air Zone selector
+              </h1>
+            </legend>
+            <span id="cazHint" class="govuk-hint">
+              Select all the CAZs for which you would like to check your vehicle’s compliance.
+            </span>
+            <div class="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="caz-1" name="caz" type="radio" value="bath">
+                <label class="govuk-label govuk-radios__label" for="caz-1">
+                  Bath and North East Somerset
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="caz-2" name="caz" type="radio" value="birmingham">
+                <label class="govuk-label govuk-radios__label" for="caz-2">
+                  Birmingham
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="caz-3" name="caz" type="radio" value="leeds">
+                <label class="govuk-label govuk-radios__label" for="caz-3">
+                  Leeds
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="caz-4" name="caz" type="radio" value="sheffield">
+                <label class="govuk-label govuk-radios__label" for="caz-4">
+                  Sheffield
+                </label>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+        
+        <button type="submit" class="govuk-button">
+            Continue
+        </button>
+      </form>
+
+    </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,90 @@
+{% extends "layout.html" %}
+
+{% block beforeContent %}
+{{ govukBackLink({
+href: "/vehicle-checker/confirm",
+text: "Back"
+}) }}
+{% endblock %}
+
+{% block pageTitle %}
+Check vehicle compliance
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-l">Make a payment for the Bath Clean Air Zone</h1>
+        <h2 class="govuk-heading-m">The tariff for your vehicle is: £5</h2>
+        <form method="post" class="form" action="/payments/paymentPages">
+            <div class="govuk-form-group">
+                <fieldset class="govuk-fieldset" aria-describedby="discountSelection-hint">
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                        <h1 class="govuk-fieldset__heading">
+                            Are you eligible for any discounts or exemptions?
+                        </h1>
+                    </legend>
+                    <span id="discountSelection-hint" class="govuk-hint">
+                        Select all options that apply.
+                    </span>
+                    <div class="govuk-checkboxes" data-module="checkboxes">
+                        <div class="govuk-checkboxes__item">
+                            <input class="govuk-checkboxes__input" id="discountSelection-1" name="blueBadge"
+                                type="checkbox" value="email" data-aria-controls="conditional-discountSelection-1">
+                            <label class="govuk-label govuk-checkboxes__label" for="discountSelection-1">
+                                I'm a blue badge holder
+                            </label>
+                        </div>
+                        <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden"
+                            id="conditional-discountSelection-1">
+                            <label class="govuk-label" for="contact-by-email">
+                                You do not have to pay a charge
+                            </label>
+
+
+                        </div>
+                        <div class="govuk-checkboxes__item">
+                            <input class="govuk-checkboxes__input" id="discountSelection-2" name="citizen"
+                                type="checkbox" value="phone" data-aria-controls="conditional-discountSelection-2">
+                            <label class="govuk-label govuk-checkboxes__label" for="discountSelection-2">
+                                I am a resident of Bath
+                            </label>
+                        </div>
+                        <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden"
+                            id="conditional-discountSelection-2">
+                            <label class="govuk-label" for="contact-by-email">
+                                You will receive a 50% discount
+                            </label>
+                        </div>
+                        <button type="" class="govuk-button">
+                            Calculate cost
+                        </button>
+
+                    </div>
+                </fieldset>
+                <h2 class="govuk-heading-m">Total cost: £5</h2>
+                <div class="govuk-form-group">
+                    <label class="govuk-label" for="email">
+                        Email address
+                    </label>
+                    <span id="email-hint" class="govuk-hint">
+                        We’ll only use this to send you a receipt
+                    </span>
+                    <input class="govuk-input" id="email" name="email" type="email" aria-describedby="email-hint"
+                        autocomplete="email">
+                </div>
+            </div>
+            <button type="submit" class="govuk-button">
+                Pay by credit or debit
+            </button>
+        </form>
+
+
+
+
+
+    </div>
+</div>
+
+{% endblock %}

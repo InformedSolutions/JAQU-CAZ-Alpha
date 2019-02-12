@@ -1,0 +1,75 @@
+
+{% extends "layout.html" %}
+
+{% block beforeContent %}
+{{ govukBackLink({
+href: "/vehicle-checker/confirm",
+text: "Back"
+}) }}
+{% endblock %}
+
+{% block pageTitle %}
+  Check vehicle compliance
+{% endblock %}
+
+{% block content %}   
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+    
+      <h1 class="govuk-heading-l">
+        Incorrect vehicle details
+      </h1>
+
+      <table class="govuk-table">
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell" scope="row"></td>
+            <td class="govuk-table__cell"></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell" scope="row">Registration</td>
+            <th class="govuk-table__cell">{{ data['vrn'] }}</td>
+          </tr>
+          <tr class="govuk-table__row">
+              <td class="govuk-table__cell" scope="row">Type</td>
+              <th class="govuk-table__cell">Car</td>
+            </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell" scope="row">Make</td>
+            <th class="govuk-table__cell">Peugeot</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell" scope="row">Colour</td>
+            <th class="govuk-table__cell">Grey</th>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell" scope="row">Fuel type</td>
+            <th class="govuk-table__cell">Diesel</th>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell" scope="row">Taxi/private hire vehicle?</td>
+            <th class="govuk-table__cell">No</th>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>If you accidentally entered the wrong registration, you can <a href="/vehicle-checker/enter-vehicle-details">search again</a>.</p>
+
+      <p>If you think any of the vehicle details are incorrect, please write to:
+      <br>
+      <br>
+      Driver and Vehicle Licensing Agency (DVLA)
+      <br>
+      Swansea
+      <br>
+      SA99 1BA
+      <br>
+      <br>
+      You'll need to include your vehicle registration certificate.
+      </p>
+
+    </div>
+</div>
+
+{% endblock %}

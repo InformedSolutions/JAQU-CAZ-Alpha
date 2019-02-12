@@ -139,4 +139,21 @@ router.get('/vehicle-checker/summary', function (req, res) {
 
 });
 
+router.post('/payments/confirm-vehicle', function (req, res) {
+  var confirm = req.body['confirm-vehicle'];
+
+  if (confirm == 'yes') {
+      res.redirect('/payments/local-authority')
+  } else if (confirm == 'no') {
+      res.redirect('/payments/incorrect-details')
+  }
+});
+
+router.post('/payments/paymentPages', function (req, res) {
+  var confirm = req.body['caz'];
+
+  res.redirect('/payments/' + confirm)
+
+});
+
 module.exports = router
