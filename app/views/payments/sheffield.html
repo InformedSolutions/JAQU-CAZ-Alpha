@@ -15,9 +15,9 @@ Check vehicle compliance
 
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-        <h1 class="govuk-heading-l">Make a payment for the Bath Clean Air Zone</h1>
+        <h1 class="govuk-heading-l">Make a payment for the Sheffield Clean Air Zone</h1>
         <h2 class="govuk-heading-m">The base tariff for your vehicle is: £5</h2>
-        <form method="post" class="form" action="/payments/pay-money">
+        <form method="post" class="form" action="/payments/paymentPages">
         <div class="govuk-form-group">
             <fieldset class="govuk-fieldset" aria-describedby="discountSelection-hint">
                 <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
@@ -46,14 +46,14 @@ Check vehicle compliance
                         <input class="govuk-checkboxes__input" id="discountSelection-2" name="citizen" type="checkbox"
                             value="bath-resident" data-aria-controls="conditional-discountSelection-2">
                         <label class="govuk-label govuk-checkboxes__label" for="discountSelection-2">
-                            I am a resident of Bath
+                            I am a resident of Sheffield
                         </label>
                     </div>
                     <div class="govuk-checkboxes__item" onclick="changeCharge()">
                         <input class="govuk-checkboxes__input" id="discountSelection-3" name="desire" type="checkbox"
                             value="bath-resident" data-aria-controls="conditional-discountSelection-3">
                         <label class="govuk-label govuk-checkboxes__label" for="discountSelection-3">
-                            I just really want a 30% discount
+                            I just really want a 10% discount
                         </label>
                     </div>
 
@@ -93,7 +93,7 @@ Check vehicle compliance
                 } else if (document.getElementById("discountSelection-2").checked == true) {
                     charge = "Total cost: £2.50"
                 } else if (document.getElementById("discountSelection-3").checked == true) {
-                    charge = "Total cost: £3.50"
+                    charge = "Total cost: £4.50"
                 } else {
                     charge = "Total cost: £5.00"
                 }
