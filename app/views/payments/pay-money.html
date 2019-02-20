@@ -1,0 +1,50 @@
+{% extends "layout.html" %}
+
+{% block beforeContent %}
+{{ govukBackLink({
+href: "/payments/bath",
+text: "Back"
+}) }}
+{% endblock %}
+
+{% block pageTitle %}
+Pay Clean Air Zone charge
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-l">Choose payment method</h1>
+        <h2 class="govuk-heading-m">You are paying: {{amountDue}}</h2>
+        <form method="post" class="form" action="/payments/selectedPaymentMethod">
+        <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                    <h1 class="govuk-fieldset__heading">
+                        How do you want to pay?
+                    </h1>
+                </legend>
+                <div class="govuk-radios">
+                    <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="payment-method-1" name="payment-method" type="radio"  value="paypal">
+                        <label class="govuk-label govuk-radios__label" for="payment-method-1">
+                            Paypal
+                        </label>
+                    </div>
+                    <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="payment-method-2" name="payment-method" type="radio" value="debit-credit-card">
+                        <label class="govuk-label govuk-radios__label" for="payment-method-2">
+                            Debit or credit card
+                        </label>
+                    </div>
+                </div>
+            </fieldset>
+        </div>
+        <button type="submit" class="govuk-button">
+            Continue
+        </button>
+        </form>
+    </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,73 @@
+{% extends "layout.html" %}
+
+{% block beforeContent %}
+{{ govukBackLink({
+href: "/payments/pay-money",
+text: "Back"
+}) }}
+{% endblock %}
+
+{% block pageTitle %}
+Pay Clean Air Zone charge
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <form method="post" class="form" action="/payments/confirm-payment">
+        <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+                <h1 class="govuk-fieldset__heading">
+                    Enter card details
+                </h1>
+            </legend>
+            <p>You are paying £XX.XX for entering the Bath Clean Air Zone</p>
+            <div class="govuk-form-group">
+                <label class="govuk-label" for="card-number">
+                    Card Number
+                </label>
+
+                <input class="govuk-input" id="card-number" name="card-number" type="text"
+                    aria-describedby="card-number-hint">
+                <span id="card-number-hint" class="govuk-hint">
+                    <img src="../../../public/images/card-types.png" alt="accepted-cards-visa-maestro-mastercard-amex"
+                        style="height: 40px;" />
+                    </br>
+                    Accepted credit and debit card types
+                </span>
+            </div>
+            <div class="govuk-form-group">
+                <label class="govuk-label" for="width-2">
+                    Expiry date
+                </label>
+                <input class="govuk-input govuk-input--width-2" id="width-2" name="width-2" type="text">
+                /
+                <input class="govuk-input govuk-input--width-2" id="width-2" name="width-2" type="text">
+            </div>
+            <div class="govuk-form-group">
+                <label class="govuk-label" for="card-name">
+                    Name on card
+                </label>
+                <input class="govuk-input" id="card-number" name="card-name" type="text"
+                    aria-describedby="card-name-hint">
+            </div>
+            <div class="govuk-form-group">
+                    <label class="govuk-label" for="card-code">
+                        Card Security code
+                    </label>
+                    <input class="govuk-input govuk-input--width-3" id="card-code" name="card-code" type="text"
+                        aria-describedby="card-code-hint">
+                </div>
+        </fieldset>
+        <button type="submit" class="govuk-button">
+                Confirm and pay
+        </button>
+        </form>
+
+
+
+
+    </div>
+</div>
+
+{% endblock %}

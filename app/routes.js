@@ -156,4 +156,25 @@ router.post('/payments/paymentPages', function (req, res) {
 
 });
 
+router.post('/payments/pay-money', function (req, res) {
+  if (req.session.data['discountSelection-1'] == "blue-badge"){
+    req.session.amountDue = '£0.00';
+  } else if (req.session.data['discountSelection-2'] == "bath-resident") {
+    req.session.amountDue = '£2.50';
+  } else if (req.session.data['discountSelection-3'] == "desire") {
+    req.session.amountDue = '£3.50';
+  } else {
+    req.session.amountDue = '£5.00';
+  }
+  res.render('payments/pay-money', {amountDue: req.session.amountDue});
+
+});
+
+router.post('/payments/selectedPaymentMethod', function (req, res) {
+  var method = req.body['payment-method'];
+
+  res.redirect('/payments/' + method)
+
+});
+
 module.exports = router
