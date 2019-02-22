@@ -64,37 +64,45 @@ Pay Clean Air Zone charge
                     Calculate cost
                 </button> -->
             </fieldset>
-            <h2 class="govuk-heading-m" id="charge" name="charge">Total cost: £5.00</h2>
         </div>
         <button type="submit" class="govuk-button">
             Choose payment method
         </button>
         </form>
 
-        <script>
-            function changeCharge() {
+    </div>
 
-                var charge = document.getElementById("charge").innerHTML;
-
-                if (document.getElementById("discountSelection-1").checked == true) {
-
-                    charge = "Total cost: £0.00"
-
-                } else if (document.getElementById("discountSelection-2").checked == true) {
-                    charge = "Total cost: £2.50"
-                } else if (document.getElementById("discountSelection-3").checked == true) {
-                    charge = "Total cost: £3.50"
-                } else {
-                    charge = "Total cost: £5.00"
-                }
-
-
-                document.getElementById("charge").innerHTML = charge;
-
-            }
-        </script>
-
+    <div class="govuk-grid-column-one-third" style="background: #f8f8f8; border-style: solid; border-width: 10px; border-color: 
+    #bfc1c3; padding: 20px; width: 31%;">
+        <h2 class="govuk-heading-m">
+            Payment summary
+        </h2>
+        <h3 class="govuk-heading-s">
+            Total charge
+        </h3>
+        <h2 class="govuk-heading-m" id="charge" name="charge">£5.00</h2>
     </div>
 </div>
+
+<script>
+        function changeCharge() {
+
+            var charge = document.getElementById("charge").innerHTML;
+
+            if (document.getElementById("discountSelection-1").checked == true) {
+                charge = "£0.00"
+            } else if (document.getElementById("discountSelection-2").checked == true) {
+                charge = "£2.50"
+            } else if (document.getElementById("discountSelection-3").checked == true) {
+                charge = "£3.50"
+            } else {
+                charge = "£5.00"
+            }
+
+
+            document.getElementById("charge").innerHTML = charge;
+
+        }
+    </script>
 
 {% endblock %}
