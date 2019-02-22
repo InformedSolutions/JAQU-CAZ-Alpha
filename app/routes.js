@@ -159,14 +159,17 @@ router.post('/payments/paymentPages', function (req, res) {
 router.post('/payments/pay-money', function (req, res) {
   if (req.session.data['discountSelection-1'] == "blue-badge"){
     req.session.amountDue = '£0.00';
+    res.render('payments/no-payment', {amountDue: req.session.amountDue});
   } else if (req.session.data['discountSelection-2'] == "bath-resident") {
     req.session.amountDue = '£2.50';
+    res.render('payments/pay-money', {amountDue: req.session.amountDue});
   } else if (req.session.data['discountSelection-3'] == "desire") {
     req.session.amountDue = '£3.50';
+    res.render('payments/pay-money', {amountDue: req.session.amountDue});
   } else {
     req.session.amountDue = '£5.00';
+    res.render('payments/pay-money', {amountDue: req.session.amountDue});
   }
-  res.render('payments/pay-money', {amountDue: req.session.amountDue});
 
 });
 
