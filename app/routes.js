@@ -173,7 +173,7 @@ router.post('/payments/pay-money', function (req, res) {
 router.post('/payments/selectedPaymentMethod', function (req, res) {
   var method = req.body['payment-method'];
 
-  res.redirect('/payments/' + method)
+  res.render('payments/' + method, {amountDue: req.session.amountDue});
 
 });
 
