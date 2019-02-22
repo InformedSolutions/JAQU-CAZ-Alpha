@@ -24,40 +24,52 @@ Pay Clean Air Zone charge
             <p>You are paying £XX.XX for entering the Bath Clean Air Zone</p>
             <div class="govuk-form-group">
                 <label class="govuk-label" for="card-number">
-                    Card Number
+                    <b>Card number</b>
                 </label>
-
-                <input class="govuk-input" id="card-number" name="card-number" type="text"
-                    aria-describedby="card-number-hint">
+                <input class="govuk-input id="card-number" name="card-number" type="text" aria-describedby="card-number-hint">
+                <br>
+                <br>
                 <span id="card-number-hint" class="govuk-hint">
-                    <img src="../../../public/images/card-types.png" alt="accepted-cards-visa-maestro-mastercard-amex"
-                        style="height: 40px;" />
-                    </br>
+                    <img src="../../../public/images/card-types.png" alt="accepted-cards-visa-maestro-mastercard-amex" style="height: 40px;" />
+                    <br>
                     Accepted credit and debit card types
                 </span>
             </div>
             <div class="govuk-form-group">
                 <label class="govuk-label" for="width-2">
-                    Expiry date
+                    <b>Expiry date</b>
                 </label>
+                <span id="expirty-date-hint" class="govuk-hint">
+                    For example, 01/20
+                </span>
                 <input class="govuk-input govuk-input--width-2" id="width-2" name="width-2" type="text">
                 /
                 <input class="govuk-input govuk-input--width-2" id="width-2" name="width-2" type="text">
             </div>
             <div class="govuk-form-group">
                 <label class="govuk-label" for="card-name">
-                    Name on card
+                    <b>Name on card</b>
                 </label>
                 <input class="govuk-input" id="card-number" name="card-name" type="text"
                     aria-describedby="card-name-hint">
             </div>
             <div class="govuk-form-group">
                     <label class="govuk-label" for="card-code">
-                        Card Security code
+                        <b>Card security code</b>
                     </label>
                     <input class="govuk-input govuk-input--width-3" id="card-code" name="card-code" type="text"
                         aria-describedby="card-code-hint">
                 </div>
+                <div class="govuk-form-group">
+                    <label class="govuk-label" for="email">
+                        <b>Email address</b>
+                    </label>
+                    <span id="email-hint" class="govuk-hint">
+                        We’ll only use this to send you a receipt
+                    </span>
+                    <input class="govuk-input" id="email" name="email" type="email" aria-describedby="email-hint"
+                        autocomplete="email">
+                </div>    
         </fieldset>
         <button type="submit" class="govuk-button">
                 Confirm and pay
