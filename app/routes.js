@@ -189,7 +189,9 @@ router.post('/payments/selectedPaymentMethod', function (req, res) {
 
 router.post('/payments/confirm-payment', function (req, res) {
 
-  res.render('payments/confirm-payment', {amountDue: req.session.amountDue});
+  var localAuthority = req.session.data['caz'].charAt(0).toUpperCase() + req.session.data['caz'].slice(1);
+
+  res.render('payments/confirm-payment', {amountDue: req.session.amountDue, localAuthority: localAuthority});
 
 });
 
