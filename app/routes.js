@@ -180,4 +180,17 @@ router.post('/payments/selectedPaymentMethod', function (req, res) {
 
 });
 
+router.post('/payments/selectedPaymentMethod', function (req, res) {
+  var method = req.body['payment-method'];
+
+  res.render('payments/' + method, {amountDue: req.session.amountDue});
+
+});
+
+router.post('/payments/confirm-payment', function (req, res) {
+
+  res.render('payments/confirm-payment', {amountDue: req.session.amountDue});
+
+});
+
 module.exports = router
