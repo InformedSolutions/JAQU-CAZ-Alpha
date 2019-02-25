@@ -15,16 +15,19 @@ Check vehicle compliance
 
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-        <h1 class="govuk-heading-l">Confirmation page</h1>
+        <h1 class="govuk-heading-l">Payment confirmation</h1>
         <div class="govuk-panel govuk-panel--confirmation">
             <h1 class="govuk-panel__title">
-                You have paid £XX.XX for the Bath CAZ
+                You have paid {{amountDue}} for the {{localAuthority}} CAZ
             </h1>
+            <p style="color: white; font-size: 30px;">Payment reference: XYZ123ABC</p>
         </div>
-        <h2 class="govuk-heading-m">Payment reference: XYZ123ABC</h2>
-        <p>A receipt has been sent to you via email</p>
-        <p>If you need to pay for another vehicle please <a href="enter-vehicle-details.html">Click Here</a></p>
-        <p>If you want to pay for the same vehicle for another CAZ please <a href="local-authority.html">Click Here</a></p>
+        <p>Receipts have been sent to you via e-mail and SMS.</p>
+        <h2 class="govuk-heading-m">Other tasks</h2>
+        <ul class="govuk-list govuk-list--bullet">
+            <li><a href="local-authority.html">Pay for another CAZ</a></li>
+            <li><a href="enter-vehicle-details.html">Pay for another vehicle</a></li>
+        </ul>
     </div>
 </div>
 
