@@ -23,7 +23,7 @@ Pay Clean Air Zone charge
                 <fieldset class="govuk-fieldset" aria-describedby="discountSelection-hint">
                     <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
                         <h1 class="govuk-fieldset__heading">
-                            Are you eligible for any discounts or exemptions?
+                            Are you eligible for any discounts?
                         </h1>
                     </legend>
                     <span id="discountSelection-hint" class="govuk-hint">
@@ -32,23 +32,16 @@ Pay Clean Air Zone charge
                     <div class="govuk-checkboxes" data-module="checkboxes" onclick="changeCharge()">
                         <div class="govuk-checkboxes__item">
                             <input class="govuk-checkboxes__input" id="discountSelection-1" name="discountSelection-1" type="checkbox"
-                                value="blue-badge" data-aria-controls="conditional-discountSelection-1">
+                                value="desire" data-aria-controls="conditional-discountSelection-1">
                             <label class="govuk-label govuk-checkboxes__label" for="discountSelection-1">
-                                I have lived in the Birmingham CAZ since before September 2018 (<a href="https://www.birmingham.gov.uk/info/20076/pollution/1763/a_clean_air_zone_for_birmingham/6" target=_blank>find out more</a>)
+                                I just really want a 30% discount
                             </label>
                         </div>
                         <div class="govuk-checkboxes__item" onclick="changeCharge()">
                             <input class="govuk-checkboxes__input" id="discountSelection-2" name="discountSelection-2" type="checkbox"
-                                value="bath-resident" data-aria-controls="conditional-discountSelection-2">
+                                value="desire2" data-aria-controls="conditional-discountSelection-2">
                             <label class="govuk-label govuk-checkboxes__label" for="discountSelection-2">
-                                I drive to work in the Birmingham CAZ and earn less than £30,000 a year (<a href="https://www.birmingham.gov.uk/info/20076/pollution/1763/a_clean_air_zone_for_birmingham/6" target=_blank>find out more</a>)
-                            </label>
-                        </div>
-                        <div class="govuk-checkboxes__item" onclick="changeCharge()">
-                            <input class="govuk-checkboxes__input" id="discountSelection-3" name="discountSelection-3" type="checkbox"
-                                value="desire" data-aria-controls="conditional-discountSelection-3">
-                            <label class="govuk-label govuk-checkboxes__label" for="discountSelection-3">
-                                I drive a specialist emergency, historic, military or show vehicle (<a href="https://www.birmingham.gov.uk/info/20076/pollution/1763/a_clean_air_zone_for_birmingham/6" target=_blank>find out more</a>)
+                                I just really want a 50% discount
                             </label>
                         </div>
                     </div>
@@ -79,12 +72,10 @@ Pay Clean Air Zone charge
 
         var charge = document.getElementById("charge").innerHTML;
 
-        if (document.getElementById("discountSelection-1").checked == true) {
-            charge = "£0.00"
-        } else if (document.getElementById("discountSelection-2").checked == true) {
-            charge = "£0.00"
-        } else if (document.getElementById("discountSelection-3").checked == true) {
-            charge = "£0.00"
+        if (document.getElementById("discountSelection-2").checked == true) {
+            charge = "£4.00"
+        } else if (document.getElementById("discountSelection-1").checked == true) {
+            charge = "£5.60"
         } else {
             charge = "£8.00"
         }
