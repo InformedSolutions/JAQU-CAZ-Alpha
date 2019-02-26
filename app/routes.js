@@ -149,6 +149,13 @@ router.post('/payments/confirm-vehicle', function (req, res) {
   }
 });
 
+router.get('/payments/caz', function (req, res) {
+  var caz = req.session.data['caz'];
+
+  res.redirect('/payments/' + caz)
+
+});
+
 router.post('/payments/paymentPages', function (req, res) {
   var confirm = req.body['caz'];
 
@@ -157,18 +164,35 @@ router.post('/payments/paymentPages', function (req, res) {
 });
 
 router.post('/payments/pay-money', function (req, res) {
-  if (req.session.data['discountSelection-1'] == "blue-badge"){
-    req.session.amountDue = '£0.00';
-    res.render('payments/no-payment', {amountDue: req.session.amountDue});
-  } else if (req.session.data['discountSelection-2'] == "bath-resident") {
-    req.session.amountDue = '£2.50';
-    res.render('payments/pay-money', {amountDue: req.session.amountDue});
-  } else if (req.session.data['discountSelection-3'] == "desire") {
-    req.session.amountDue = '£3.50';
-    res.render('payments/pay-money', {amountDue: req.session.amountDue});
-  } else {
-    req.session.amountDue = '£5.00';
-    res.render('payments/pay-money', {amountDue: req.session.amountDue});
+
+  var caz = req.session.data['caz'];
+  
+  if (req.session.data['caz'] == "birmingham") {
+
+    if (req.session.data['discountSelection-1'] == "birmingham-30") {
+      req.session.amountDue = '£5.60';
+      res.render('payments/pay-money', {amountDue: req.session.amountDue, caz: caz});
+    } else if (req.session.data['discountSelection-2'] == "birmingham-50") {
+      req.session.amountDue = '£4.00';
+      res.render('payments/pay-money', {amountDue: req.session.amountDue, caz: caz});  
+    } else {
+      req.session.amountDue = '£8.00';
+      res.render('payments/pay-money', {amountDue: req.session.amountDue, caz: caz});
+    }
+
+  } else if (req.session.data['caz'] == "leeds") {
+
+    if (req.session.data['discountSelection-1'] == "leeds-30") {
+      req.session.amountDue = '£8.75';
+      res.render('payments/pay-money', {amountDue: req.session.amountDue, caz: caz});
+    } else if (req.session.data['discountSelection-2'] == "leeds-50") {
+      req.session.amountDue = '£6.25';
+      res.render('payments/pay-money', {amountDue: req.session.amountDue, caz: caz});  
+    } else {
+      req.session.amountDue = '£12.50';
+      res.render('payments/pay-money', {amountDue: req.session.amountDue, caz: caz});
+    }
+
   }
 
 });

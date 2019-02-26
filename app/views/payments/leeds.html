@@ -18,6 +18,9 @@ Pay Clean Air Zone charge
         <h1 class="govuk-heading-l">Pay a Leeds Clean Air Zone charge</h1>
         <p>The base tariff per day for your vehicle is:</p>
         <h2 class="govuk-heading-m">£12.50</h2>
+        <div class="govuk-inset-text">
+            Leeds licensed taxis and private hire vehicles can pay £50 for a week. Find out more <a href="https://www.leeds.gov.uk/business/environmental-health-for-business/air-quality/daily-charges-clean-air-charging-zone" target=_blank>here</a>.
+        </div>
         <form method="post" class="form" action="/payments/pay-money">
             <div class="govuk-form-group">
                 <fieldset class="govuk-fieldset" aria-describedby="discountSelection-hint">
@@ -32,14 +35,14 @@ Pay Clean Air Zone charge
                     <div class="govuk-checkboxes" data-module="checkboxes" onclick="changeCharge()">
                         <div class="govuk-checkboxes__item">
                             <input class="govuk-checkboxes__input" id="discountSelection-1" name="discountSelection-1" type="checkbox"
-                                value="desire" data-aria-controls="conditional-discountSelection-1">
+                                value="leeds-30" data-aria-controls="conditional-discountSelection-1">
                             <label class="govuk-label govuk-checkboxes__label" for="discountSelection-1">
                                 I just really want a 30% discount
                             </label>
                         </div>
                         <div class="govuk-checkboxes__item" onclick="changeCharge()">
                             <input class="govuk-checkboxes__input" id="discountSelection-2" name="discountSelection-2" type="checkbox"
-                                value="desire2" data-aria-controls="conditional-discountSelection-2">
+                                value="leeds-50" data-aria-controls="conditional-discountSelection-2">
                             <label class="govuk-label govuk-checkboxes__label" for="discountSelection-2">
                                 I just really want a 50% discount
                             </label>
