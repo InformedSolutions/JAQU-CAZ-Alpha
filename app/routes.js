@@ -204,6 +204,13 @@ router.post('/payments/selectedPaymentMethod', function (req, res) {
 
 });
 
+router.get('/payments/selectedPaymentMethod', function (req, res) {
+  var method = req.session.data['payment-method'];
+
+  res.render('payments/' + method, {amountDue: req.session.amountDue});
+
+});
+
 router.get('/payments/pay-money', function (req, res) {
 
   res.render('payments/pay-money', {amountDue: req.session.amountDue});
@@ -211,6 +218,14 @@ router.get('/payments/pay-money', function (req, res) {
 });
 
 router.post('/payments/confirm-payment', function (req, res) {
+
+  var localAuthority = req.session.data['caz'].charAt(0).toUpperCase() + req.session.data['caz'].slice(1);
+
+  res.render('payments/confirm-payment', {amountDue: req.session.amountDue, localAuthority: localAuthority});
+
+});
+
+router.get('/payments/confirm-payment', function (req, res) {
 
   var localAuthority = req.session.data['caz'].charAt(0).toUpperCase() + req.session.data['caz'].slice(1);
 
