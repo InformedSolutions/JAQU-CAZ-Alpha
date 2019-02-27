@@ -16,43 +16,15 @@ text: "Back"
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
         <h1 class="govuk-heading-l">Pay a Bath Clean Air Zone charge</h1>
-        <p>The base tariff per day for your vehicle is:</p>
-        <h2 class="govuk-heading-m">£8.00</h2>
-        <form method="post" class="form" action="/payments/pay-money">
-            <div class="govuk-form-group">
-                <fieldset class="govuk-fieldset" aria-describedby="discountSelection-hint">
-                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
-                        <h1 class="govuk-fieldset__heading">
-                            Are you eligible for any discounts?
-                        </h1>
-                    </legend>
-                    <span id="discountSelection-hint" class="govuk-hint">
-                        Select all options that apply. The highest discount will be applied.
-                    </span>
-                    <div class="govuk-checkboxes" data-module="checkboxes" onclick="changeCharge()">
-                        <div class="govuk-checkboxes__item">
-                            <input class="govuk-checkboxes__input" id="discountSelection-1" name="discountSelection-1" type="checkbox"
-                                value="desire" data-aria-controls="conditional-discountSelection-1">
-                            <label class="govuk-label govuk-checkboxes__label" for="discountSelection-1">
-                                I just really want a 30% discount
-                            </label>
-                        </div>
-                        <div class="govuk-checkboxes__item" onclick="changeCharge()">
-                            <input class="govuk-checkboxes__input" id="discountSelection-2" name="discountSelection-2" type="checkbox"
-                                value="desire2" data-aria-controls="conditional-discountSelection-2">
-                            <label class="govuk-label govuk-checkboxes__label" for="discountSelection-2">
-                                I just really want a 50% discount
-                            </label>
-                        </div>
-                    </div>
-                    <br>
-                </fieldset>
-            </div>
-            <button type="submit" class="govuk-button">
-                Continue
-            </button>
-        </form>
-
+        <div class="govuk-warning-text">
+            <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+            <strong class="govuk-warning-text__text">
+                <span class="govuk-warning-text__assistive">Warning</span>
+                Due to temporary road closures on the A36, charging has been suspended for 27 February 2019.
+            </strong>
+        </div>
+        <p>You do not need to pay today.</p>
+        <p><a href="/payments/local-authority">Pay for another CAZ</a></p>
     </div>
 
     <div class="govuk-grid-column-one-third" style="background: #f8f8f8; border-style: solid; border-width: 10px; border-color: 
@@ -63,26 +35,8 @@ text: "Back"
         <h3 class="govuk-heading-s">
             Total charge
         </h3>
-        <h2 class="govuk-heading-m" id="charge" name="charge">£8.00</h2>
+        <h2 class="govuk-heading-m" id="charge" name="charge">£0.00</h2>
     </div>
 </div>
-
-<script>
-    function changeCharge() {
-
-        var charge = document.getElementById("charge").innerHTML;
-
-        if (document.getElementById("discountSelection-2").checked == true) {
-            charge = "£4.00"
-        } else if (document.getElementById("discountSelection-1").checked == true) {
-            charge = "£5.60"
-        } else {
-            charge = "£8.00"
-        }
-
-        document.getElementById("charge").innerHTML = charge;
-
-    }
-</script>
 
 {% endblock %}
