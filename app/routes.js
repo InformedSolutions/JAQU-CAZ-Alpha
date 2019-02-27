@@ -204,10 +204,9 @@ router.post('/payments/selectedPaymentMethod', function (req, res) {
 
 });
 
-router.post('/payments/selectedPaymentMethod', function (req, res) {
-  var method = req.body['payment-method'];
+router.get('/payments/pay-money', function (req, res) {
 
-  res.render('payments/' + method, {amountDue: req.session.amountDue});
+  res.render('payments/pay-money', {amountDue: req.session.amountDue});
 
 });
 
