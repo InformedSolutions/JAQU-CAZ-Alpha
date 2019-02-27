@@ -8,7 +8,7 @@ text: "Back"
 {% endblock %}
 
 {% block pageTitle %}
-Pay Clean Air Zone charge
+    Pay a Clean Air Zone charge
 {% endblock %}
 
 {% block content %}
@@ -16,14 +16,14 @@ Pay Clean Air Zone charge
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
         <h1 class="govuk-heading-l">Pay a Birmingham Clean Air Zone charge</h1>
-        <p>The base tariff for your vehicle is:</p>
-        <h2 class="govuk-heading-m">£5.00</h2>
+        <p>The base tariff per day for your vehicle is:</p>
+        <h2 class="govuk-heading-m">£8.00</h2>
         <form method="post" class="form" action="/payments/pay-money">
             <div class="govuk-form-group">
                 <fieldset class="govuk-fieldset" aria-describedby="discountSelection-hint">
                     <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
                         <h1 class="govuk-fieldset__heading">
-                            Are you eligible for any discounts or exemptions?
+                            Are you eligible for any discounts?
                         </h1>
                     </legend>
                     <span id="discountSelection-hint" class="govuk-hint">
@@ -32,23 +32,16 @@ Pay Clean Air Zone charge
                     <div class="govuk-checkboxes" data-module="checkboxes" onclick="changeCharge()">
                         <div class="govuk-checkboxes__item">
                             <input class="govuk-checkboxes__input" id="discountSelection-1" name="discountSelection-1" type="checkbox"
-                                value="blue-badge" data-aria-controls="conditional-discountSelection-1">
+                                value="birmingham-30" data-aria-controls="conditional-discountSelection-1">
                             <label class="govuk-label govuk-checkboxes__label" for="discountSelection-1">
-                                I am a Blue Badge holder
+                                Sample 30% discount
                             </label>
                         </div>
                         <div class="govuk-checkboxes__item" onclick="changeCharge()">
                             <input class="govuk-checkboxes__input" id="discountSelection-2" name="discountSelection-2" type="checkbox"
-                                value="bath-resident" data-aria-controls="conditional-discountSelection-2">
+                                value="birmingham-50" data-aria-controls="conditional-discountSelection-2">
                             <label class="govuk-label govuk-checkboxes__label" for="discountSelection-2">
-                                I am a resident of Birmingham
-                            </label>
-                        </div>
-                        <div class="govuk-checkboxes__item" onclick="changeCharge()">
-                            <input class="govuk-checkboxes__input" id="discountSelection-3" name="discountSelection-3" type="checkbox"
-                                value="desire" data-aria-controls="conditional-discountSelection-3">
-                            <label class="govuk-label govuk-checkboxes__label" for="discountSelection-3">
-                                I just really want a 30% discount
+                                Sample 50% discount
                             </label>
                         </div>
                     </div>
@@ -70,7 +63,7 @@ Pay Clean Air Zone charge
         <h3 class="govuk-heading-s">
             Total charge
         </h3>
-        <h2 class="govuk-heading-m" id="charge" name="charge">£5.00</h2>
+        <h2 class="govuk-heading-m" id="charge" name="charge">£8.00</h2>
     </div>
 </div>
 
@@ -79,14 +72,12 @@ Pay Clean Air Zone charge
 
         var charge = document.getElementById("charge").innerHTML;
 
-        if (document.getElementById("discountSelection-1").checked == true) {
-            charge = "£0.00"
-        } else if (document.getElementById("discountSelection-2").checked == true) {
-            charge = "£2.50"
-        } else if (document.getElementById("discountSelection-3").checked == true) {
-            charge = "£3.50"
+        if (document.getElementById("discountSelection-2").checked == true) {
+            charge = "£4.00"
+        } else if (document.getElementById("discountSelection-1").checked == true) {
+            charge = "£5.60"
         } else {
-            charge = "£5.00"
+            charge = "£8.00"
         }
 
         document.getElementById("charge").innerHTML = charge;
