@@ -17,7 +17,7 @@ text: "Back"
     <div class="govuk-grid-column-two-thirds">
         <h1 class="govuk-heading-l">Pay a Sheffield Clean Air Zone charge</h1>
         <p>The base tariff per day for your vehicle is:</p>
-        <h2 class="govuk-heading-m">£8.00</h2>
+        <h2 class="govuk-heading-m">£10.00</h2>
         <form method="post" class="form" action="/payments/pay-money">
             <div class="govuk-form-group">
                 <fieldset class="govuk-fieldset" aria-describedby="discountSelection-hint">
@@ -32,16 +32,16 @@ text: "Back"
                     <div class="govuk-checkboxes" data-module="checkboxes" onclick="changeCharge()">
                         <div class="govuk-checkboxes__item">
                             <input class="govuk-checkboxes__input" id="discountSelection-1" name="discountSelection-1" type="checkbox"
-                                value="desire" data-aria-controls="conditional-discountSelection-1">
+                                value="sheffield-30" data-aria-controls="conditional-discountSelection-1">
                             <label class="govuk-label govuk-checkboxes__label" for="discountSelection-1">
-                                I just really want a 30% discount
+                                Sample 30% discount
                             </label>
                         </div>
                         <div class="govuk-checkboxes__item" onclick="changeCharge()">
                             <input class="govuk-checkboxes__input" id="discountSelection-2" name="discountSelection-2" type="checkbox"
-                                value="desire2" data-aria-controls="conditional-discountSelection-2">
+                                value="sheffield-50" data-aria-controls="conditional-discountSelection-2">
                             <label class="govuk-label govuk-checkboxes__label" for="discountSelection-2">
-                                I just really want a 50% discount
+                                Sample 50% discount
                             </label>
                         </div>
                     </div>
@@ -63,7 +63,7 @@ text: "Back"
         <h3 class="govuk-heading-s">
             Total charge
         </h3>
-        <h2 class="govuk-heading-m" id="charge" name="charge">£8.00</h2>
+        <h2 class="govuk-heading-m" id="charge" name="charge">£10.00</h2>
     </div>
 </div>
 
@@ -73,11 +73,11 @@ text: "Back"
         var charge = document.getElementById("charge").innerHTML;
 
         if (document.getElementById("discountSelection-2").checked == true) {
-            charge = "£4.00"
+            charge = "£5.00"
         } else if (document.getElementById("discountSelection-1").checked == true) {
-            charge = "£5.60"
+            charge = "£7.00"
         } else {
-            charge = "£8.00"
+            charge = "£10.00"
         }
 
         document.getElementById("charge").innerHTML = charge;
