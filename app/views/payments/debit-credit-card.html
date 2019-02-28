@@ -14,7 +14,7 @@ text: "Back"
 {% block content %}
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-        <form method="post" class="form" action="/payments/confirm-payment">
+        <form method="post" class="form" action="/payments/receipts">
             <fieldset class="govuk-fieldset">
                 <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
                     <h1 class="govuk-heading-l">
@@ -52,33 +52,15 @@ text: "Back"
                     <input class="govuk-input" id="card-number" name="card-name" type="text" style="width: 60%;" aria-describedby="card-name-hint" required>
                 </div>
                 <div class="govuk-form-group">
-                        <label class="govuk-label" for="card-code">
-                            <b>Card security code</b>
-                        </label>
-                        <input class="govuk-input govuk-input--width-3" id="card-code" name="card-code" type="text"
-                            aria-describedby="card-code-hint" required>
-                    </div>
-                    <div class="govuk-form-group">
-                        <label class="govuk-label" for="email">
-                            <b>Email address</b>
-                        </label>
-                        <span id="email-hint" class="govuk-hint">
-                            We’ll only use this to send you a receipt
-                        </span>
-                        <input class="govuk-input" id="email" name="email" type="email" style="width: 60%;" required aria-describedby="email-hint" autocomplete="email">
-                    </div>
-                    <div class="govuk-form-group">
-                        <label class="govuk-label" for="email">
-                            <b>Mobile number (optional)</b>
-                        </label>
-                        <span id="email-hint" class="govuk-hint">
-                            We’ll only use this to send you a receipt
-                        </span>
-                        <input class="govuk-input" id="email" name="email" type="text" style="width: 60%;" aria-describedby="email-hint" autocomplete="email">
-                    </div>    
+                    <label class="govuk-label" for="card-code">
+                        <b>Card security code</b>
+                    </label>
+                    <input class="govuk-input govuk-input--width-3" id="card-code" name="card-code" type="text"
+                        aria-describedby="card-code-hint" required>
+                </div>  
             </fieldset>
             <button type="submit" class="govuk-button">
-                    Confirm and pay
+                Continue
             </button>
         </form>
 

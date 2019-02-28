@@ -259,4 +259,16 @@ router.get('/payments/confirm-payment', function (req, res) {
 
 });
 
+router.get('/payments/receipts', function (req, res) {
+
+  res.render('payments/receipts', {amountDue: req.session.amountDue});
+
+});
+
+router.post('/payments/receipts', function (req, res) {
+
+  res.render('payments/receipts', {amountDue: req.session.amountDue});
+
+});
+
 module.exports = router
