@@ -206,6 +206,19 @@ router.post('/payments/pay-money', function (req, res) {
       res.render('payments/pay-money', {amountDue: req.session.amountDue, caz: caz});
     }
 
+  } else if (req.session.data['caz'] == "sheffield") {
+
+    if (req.session.data['discountSelection-2'] == "sheffield-50") {
+      req.session.amountDue = '£5.00';
+      res.render('payments/pay-money', {amountDue: req.session.amountDue, caz: caz});  
+    } else if (req.session.data['discountSelection-1'] == "sheffield-30") {
+      req.session.amountDue = '£7.00';
+      res.render('payments/pay-money', {amountDue: req.session.amountDue, caz: caz});  
+    } else {
+      req.session.amountDue = '£10.00';
+      res.render('payments/pay-money', {amountDue: req.session.amountDue, caz: caz});
+    }
+
   }
 
 });
