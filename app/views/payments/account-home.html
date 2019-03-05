@@ -22,7 +22,7 @@ text: "Back"
             <br>
             <a href="/payments/account-details">Account details</a>
             <br>
-            <a href="/payments/account-payments">Payments</a>
+            <a href="/payments/account-payments">Payment history</a>
             <br>
             <a href="/payments/account-vehicles">Vehicles</a>
             <br>
@@ -38,6 +38,11 @@ text: "Back"
             <br>
             123456789
         </p>
+        <p>
+            <b>Account type</b>
+            <br>
+            Personal
+        </p>
     </div>
     <div class="govuk-grid-column-two-thirds">
       <h1 class="govuk-heading-l">Home</h1>
@@ -45,12 +50,12 @@ text: "Back"
           Pay for today
       </h1>
       <div class="govuk-form-group">
-        <label class="govuk-label" for="sort">
+        <label class="govuk-label" for="vrm">
           Select vehicle
         </label>
-        <select class="govuk-select" id="sort" name="sort">
-          <option value="published" selected>AE02 RYA</option>
-          <option value="views">WA14 RD</option>
+        <select class="govuk-select" id="vrm" name="vrm" onchange="changeCharges()">
+          <option value="AE02 RYA">AE02 RYA</option>
+          <option value="WA14 RD">WA14 RD</option>
         </select>
       </div>
       <table class="govuk-table">
@@ -68,27 +73,48 @@ text: "Back"
           </tr>
           <tr class="govuk-table__row">
             <td class="govuk-table__cell" scope="row">Bath</td>
-            <td class="govuk-table__cell">£4.50</td>
+            <td class="govuk-table__cell" id="bath-charge">£4.50</td>
             <td class="govuk-table__cell"><form method="post" action="/payments/bath"><button class="govuk-button" style="margin: 0px;">Pay</button></form></td>
           </tr>
           <tr class="govuk-table__row">
             <td class="govuk-table__cell" scope="row">Birmingham</td>
-            <td class="govuk-table__cell">£4.50</td>
+            <td class="govuk-table__cell" id="birmingham-charge">£4.50</td>
             <td class="govuk-table__cell"><form method="post" action="/payments/birmingham"><button class="govuk-button" style="margin: 0px;">Pay</button></form></td>
           </tr>
           <tr class="govuk-table__row">
             <td class="govuk-table__cell" scope="row">Leeds</td>
-            <td class="govuk-table__cell">£12.50</td>
+            <td class="govuk-table__cell" id="leeds-charge">£12.50</td>
             <td class="govuk-table__cell"><button disabled="disabled" aria-disabled="true" class="govuk-button govuk-button--disabled" style="margin: 0px;">Pay</button></td>
           </tr>
           <tr class="govuk-table__row">
             <td class="govuk-table__cell" scope="row">Sheffield</td>
-            <td class="govuk-table__cell">£10.00</td>
-            <td class="govuk-table__cell"><button class="govuk-button" style="margin: 0px;">Pay</button></td>
+            <td class="govuk-table__cell" id="sheffield-charge">£10.00</td>
+            <td class="govuk-table__cell"><form method="post" action="/payments/sheffield"><button class="govuk-button" style="margin: 0px;">Pay</button></form></td>
           </tr>
         </tbody>
       </table>
     </div>
 </div>
+
+<script>
+  function changeCharges() {
+
+    if (document.getElementById("vrm").value == "AE02 RYA") {
+
+        document.getElementById("bath-charge").innerHTML = "£4.50";
+        document.getElementById("birmingham-charge").innerHTML = "£4.50";
+        document.getElementById("leeds-charge").innerHTML = "£12.50";
+        document.getElementById("sheffield-charge").innerHTML = "£10.00";
+
+    } else if (document.getElementById("vrm").innerHTML == "WA14 RD") {
+
+        document.getElementById("bath-charge").innerHTML = "£100.00";
+        document.getElementById("birmingham-charge").innerHTML = "£50.00";
+        document.getElementById("leeds-charge").innerHTML = "£50.00";
+        document.getElementById("sheffield-charge").innerHTML = "£50.00";
+    }
+
+  }
+</script>
 
 {% endblock %}
