@@ -251,6 +251,21 @@ router.post('/payments/confirm-payment', function (req, res) {
 
 });
 
+router.post('/payments/task', function (req, res) {
+
+  var task = req.body['task'];
+
+  if (task == 'one-off-payment') {
+
+    res.redirect('/payments/enter-vehicle-details');
+
+  } else if (task == 'sign-in') {
+
+    res.redirect('/payments/sign-in');
+
+  }
+});
+
 router.get('/payments/confirm-payment', function (req, res) {
 
   var localAuthority = req.session.data['caz'].charAt(0).toUpperCase() + req.session.data['caz'].slice(1);
