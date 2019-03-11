@@ -48,7 +48,25 @@ text: "Back"
     </div>
     <div class="govuk-grid-column-two-thirds">
       <h1 class="govuk-heading-l">Payment history</h1>
-      <p>The following Clean Air Zone payments have been made in past 7 days:</p>
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="vrm" style="display: inline-block; width: 50%;">
+          <b>Vehicle registration number</b>
+          <br>
+          <select class="govuk-select" id="vrm" name="vrm">
+            <option value="AE02 RYA">AE02 RYA</option>
+            <option value="WA14 RD">WA14 RD</option>
+          </select>
+        </label>
+        <label class="govuk-label" for="caz" style="display: inline-block;">
+          <b>Clean Air Zone</b>
+          <br>
+          <select class="govuk-select" id="caz" name="caz">
+            <option value="birmingham">Birmingham</option>
+            <option value="leeds">Leeds</option>
+            <option value="sheffield">Sheffield</option>
+          </select> 
+        </label>
+      </div>
       <table class="govuk-table">
         <tbody class="govuk-table__body">
           <tr class="govuk-table__row">
