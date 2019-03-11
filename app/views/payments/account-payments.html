@@ -48,7 +48,94 @@ text: "Back"
     </div>
     <div class="govuk-grid-column-two-thirds">
       <h1 class="govuk-heading-l">Payment history</h1>
-      <p>The following Clean Air Zone payments have been made in past 7 days:</p>
+      <div style="background-color: #dee0e2; padding: 20px; padding-bottom: 5px;">
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="vrm" style="display: inline-block; width: 50%;">
+            <b>Vehicle registration number</b>
+            <br>
+            <select class="govuk-select" id="vrm" name="vrm">
+              <option value="all">All</option>
+              <option value="AE02 RYA">AE02 RYA</option>
+              <option value="WA14 RD">WA14 RD</option>
+            </select>
+          </label>
+          <label class="govuk-label" for="caz" style="display: inline-block;">
+            <b>Clean Air Zone</b>
+            <br>
+            <select class="govuk-select" id="caz" name="caz">
+              <option value="all">All</option>
+              <option value="birmingham">Birmingham</option>
+              <option value="leeds">Leeds</option>
+              <option value="sheffield">Sheffield</option>
+            </select> 
+          </label>
+        </div>
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="vrm" style="display: inline-block; width: 50%;">
+            <b>Start date</b>
+            <br>
+            <div class="govuk-date-input" id="start-date">
+              <div class="govuk-date-input__item">
+                <div class="govuk-form-group">
+                  <label class="govuk-label govuk-date-input__label" for="start-day">
+                    Day
+                  </label>
+                  <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="start-day" name="start-day" type="number" pattern="[0-9]*">
+                </div>
+              </div>
+              <div class="govuk-date-input__item">
+                <div class="govuk-form-group">
+                  <label class="govuk-label govuk-date-input__label" for="start-month">
+                    Month
+                  </label>
+                  <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="start-month" name="start-month" type="number" pattern="[0-9]*">
+                </div>
+              </div>
+              <div class="govuk-date-input__item">
+                <div class="govuk-form-group">
+                  <label class="govuk-label govuk-date-input__label" for="start-year">
+                    Year
+                  </label>
+                  <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="start-year" name="start-year" type="number" pattern="[0-9]*">
+                </div>
+              </div>
+            </div>  
+          </label>
+          <label class="govuk-label" for="caz" style="display: inline-block;">
+            <b>End date</b>
+            <br>
+            <div class="govuk-date-input" id="end-date">
+              <div class="govuk-date-input__item">
+                <div class="govuk-form-group">
+                  <label class="govuk-label govuk-date-input__label" for="end-day">
+                    Day
+                  </label>
+                  <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="end-day" name="end-day" type="number" pattern="[0-9]*">
+                </div>
+              </div>
+              <div class="govuk-date-input__item">
+                <div class="govuk-form-group">
+                  <label class="govuk-label govuk-date-input__label" for="end-month">
+                    Month
+                  </label>
+                  <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="end-month" name="end-month" type="number" pattern="[0-9]*">
+                </div>
+              </div>
+              <div class="govuk-date-input__item">
+                <div class="govuk-form-group">
+                  <label class="govuk-label govuk-date-input__label" for="end-year">
+                    Year
+                  </label>
+                  <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="end-year" name="end-year" type="number" pattern="[0-9]*">
+                </div>
+              </div>
+            </div> 
+          </label>
+        </div>
+        <button type="submit" class="govuk-button">
+          Search
+        </button>
+      </div>
       <table class="govuk-table">
         <tbody class="govuk-table__body">
           <tr class="govuk-table__row">
