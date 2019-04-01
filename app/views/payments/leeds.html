@@ -22,35 +22,6 @@ text: "Back"
             Leeds licensed taxis and private hire vehicles can pay £50 for a week. Find out more <a href="https://www.leeds.gov.uk/business/environmental-health-for-business/air-quality/daily-charges-clean-air-charging-zone" target=_blank>here</a>.
         </div>
         <form method="post" class="form" action="/payments/pay-money">
-            <div class="govuk-form-group">
-                <fieldset class="govuk-fieldset" aria-describedby="discountSelection-hint">
-                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
-                        <h1 class="govuk-fieldset__heading">
-                            Are you eligible for any discounts?
-                        </h1>
-                    </legend>
-                    <span id="discountSelection-hint" class="govuk-hint">
-                        Select all options that apply. The highest discount will be applied.
-                    </span>
-                    <div class="govuk-checkboxes" data-module="checkboxes" onclick="changeCharge()">
-                        <div class="govuk-checkboxes__item">
-                            <input class="govuk-checkboxes__input" id="discountSelection-1" name="discountSelection-1" type="checkbox"
-                                value="leeds-30" data-aria-controls="conditional-discountSelection-1">
-                            <label class="govuk-label govuk-checkboxes__label" for="discountSelection-1">
-                                Sample 30% discount
-                            </label>
-                        </div>
-                        <div class="govuk-checkboxes__item" onclick="changeCharge()">
-                            <input class="govuk-checkboxes__input" id="discountSelection-2" name="discountSelection-2" type="checkbox"
-                                value="leeds-50" data-aria-controls="conditional-discountSelection-2">
-                            <label class="govuk-label govuk-checkboxes__label" for="discountSelection-2">
-                                Sample 50% discount
-                            </label>
-                        </div>
-                    </div>
-                    <br>
-                </fieldset>
-            </div>
             <button type="submit" class="govuk-button">
                 Continue
             </button>
