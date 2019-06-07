@@ -1,0 +1,173 @@
+{% extends "layout.html" %}
+
+{% block beforeContent %}
+{{ govukBackLink({
+href: "/",
+text: "Back"
+}) }}
+{% endblock %}
+
+{% block pageTitle %}
+Check if a vehicle has to pay to drive in Clean Air Zones
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+        <form method="post" action="/compliance">
+            <fieldset class="govuk-fieldset">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+                    <h1 class="govuk-fieldset__heading">
+                        What is your vehicle?
+                    </h1>
+                </legend>
+                <div class="govuk-form-group">
+                    <label class="govuk-label" for="vehicle-type">
+                        What type of vehicle do you have?
+                    </label>
+                    <select class="govuk-select" id="vehicle-type" name="vehicle-type">
+                        <option value="Car">Car</option>
+                        <option value="Van">Van</option>
+                        <option value="Motorbike">Motorbike</option>
+                        <option value="Motorhome">Motorhome</option>
+                        <option value="PHV">Private Hire Vehicle</option>
+                        <option value="Hackney Cab">Hackney Cab</option>
+                        <option value="Minibus">Minibus</option>
+                        <option value="Coach">Coach</option>
+                        <option value="Bus">Bus</option>
+                        <option value="HGV">HGV</option>
+                    </select>
+                </div>
+
+                <div class="govuk-form-group">
+                    <label class="govuk-label" for="vehicle-fuel">
+                        What type of fuel does your vehicle use?
+                    </label>
+                    <select class="govuk-select" id="vehicle-fuel" name="vehicle-fuel">
+                        <option value="Petrol">Petrol</option>
+                        <option value="Diesel">Diesel</option>
+                        <option value="PetrolElectric">Petrol/electic hybrid</option>
+                        <option value="DieselElectric">Diesel/electric hybrid</option>
+                        <option value="Electric">Electric</option>
+                        <option value="LPG">LPG</option>
+                    </select>
+                </div>
+            </fieldset>
+
+            <div class="govuk-form-group">
+                <label class="govuk-label" for="vehicle-year">
+                    What is your vehicle's age identifier?
+                </label>
+                <details class="govuk-details">
+                    <summary class="govuk-details__summary">
+                        <span class="govuk-details__summary-text">
+                            What is this?
+                        </span>
+                    </summary>
+                    <div class="govuk-details__text">
+                        If your vehicle was registered after 31st August 2001, this is the third and fourth digit of your registration plate.<br><br>
+                        If your vehicle was registered between 1st August 1983 and 31st August, this is the first digit of your registration plate.<br><br>
+                        If your vehicle was registered before 1st August 1983, enter the value 'A'.
+                    </div>
+                </details>
+                <input class="govuk-input govuk-input--width-2" id="vehicle-year" name="vehicle-year" type="text">
+            </div>
+
+            <!-- <div class="govuk-form-group">
+                    <label class="govuk-label" for="vehicle-year">
+                        Which registration year number or letter is shown on your vehicle's number plate?
+                    </label>
+                    <select class="govuk-select" id="vehicle-year" name="vehicle-year">
+                        <option value="19">19</option>
+                        <option value="68">68</option>
+                        <option value="18">18</option>
+                        <option value="67">67</option>
+                        <option value="17">17</option>
+                        <option value="66">66</option>
+                        <option value="16">16</option>
+                        <option value="65">65</option>
+                        <option value="15">15</option>
+                        <option value="64">64</option>
+                        <option value="14">14</option>
+                        <option value="63">63</option>
+                        <option value="13">13</option>
+                        <option value="62">62</option>
+                        <option value="12">12</option>
+                        <option value="61">61</option>
+                        <option value="11">11</option>
+                        <option value="60">60</option>
+                        <option value="10">10</option>
+                        <option value="59">59</option>
+                        <option value="09">09</option>
+                        <option value="58">58</option>
+                        <option value="08">08</option>
+                        <option value="57">57</option>
+                        <option value="07">07</option>
+                        <option value="56">56</option>
+                        <option value="06">06</option>
+                        <option value="55">55</option>
+                        <option value="05">05</option>
+                        <option value="54">54</option>
+                        <option value="04">04</option>
+                        <option value="53">53</option>
+                        <option value="03">03</option>
+                        <option value="52">52</option>
+                        <option value="02">02</option>
+                        <option value="51">51</option>
+                        <option value="Y">Y</option>
+                        <option value="X">X</option>
+                        <option value="W">W</option>
+                        <option value="V">V</option>
+                        <option value="T">T</option>
+                        <option value="S">S</option>
+                        <option value="R">R</option>
+                        <option value="P">P</option>
+                        <option value="N">N</option>
+                        <option value="M">M</option>
+                        <option value="L">L</option>
+                        <option value="K">K</option>
+                        <option value="J">J</option>
+                        <option value="H">H</option>
+                        <option value="G">G</option>
+                        <option value="F">F</option>
+                        <option value="E">E</option>
+                        <option value="D">D</option>
+                        <option value="C">C</option>
+                        <option value="B">B</option>
+                        <option value="A">A</option>
+                    </select>
+                </div> -->
+
+            <div class="govuk-form-group">
+                <label class="govuk-label" for="vehicle-retrofit">
+                    Has your vehicle been retrofitted to meet the Euro Emission 6 standard?
+                </label>
+                <div class="govuk-radios govuk-radios--inline">
+                    <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="retrofit-1" name="retrofit" type="radio" value="yes">
+                        <label class="govuk-label govuk-radios__label" for="retrofit-1">
+                            Yes
+                        </label>
+                    </div>
+                    <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="retrofit-2" name="retrofit" type="radio" value="no">
+                        <label class="govuk-label govuk-radios__label" for="retrofit-2">
+                            No
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            </fieldset>
+
+            <button type="submit" class="govuk-button">
+                Continue
+            </button>
+        </form>
+
+    </div>
+</div>
+
+{% endblock %}

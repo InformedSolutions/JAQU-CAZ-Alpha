@@ -1,0 +1,53 @@
+{% extends "layout.html" %}
+
+{% block beforeContent %}
+{{ govukBackLink({
+href: "/vehicle-questions",
+text: "Back"
+}) }}
+{% endblock %}
+
+{% block pageTitle %}
+Check if a vehicle has to pay to drive in Clean Air Zones
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+        <h1 class="govuk-heading-l">Your vehicle's compliance</h1>
+
+        {% if data['retrofit'] == "yes" %}
+        <div class="govuk-panel govuk-panel--confirmation">
+            <h1 class="govuk-panel__title">
+                You will not be charged
+            </h1>
+        </div>
+        <p>Your vehicle complies with Euro Emission standards and therefore you do not have to pay a charge to enter any Clean Air Zones. </p>
+        {% else %}
+        <div class="govuk-panel govuk-panel--noncompliant">
+            <h1 class="govuk-panel__title">
+                Subject to charge
+            </h1>
+        </div>
+        <p>Your vehicle is subject to charge as it does not comply with Euro Emission standards. </p>
+        {% endif %}
+
+        <p><a href="javascript:window.print()">Print this page</a></p>
+    </div>
+
+    <div class="govuk-grid-column-one-third">
+        <h2 class="govuk-heading-m">
+            Related tasks
+        </h2>
+
+        <ul class="govuk-list govuk-list--bullet">
+            <li><a href="/vehicle-questions">Check another vehicle's compliance</a></li>
+            <li><a href="">Discover ways to avoid having to pay</a></li>
+        </ul>
+    </div>
+
+</div>
+
+{% endblock %}
