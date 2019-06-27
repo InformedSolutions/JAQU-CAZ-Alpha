@@ -1,0 +1,36 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  National Taxi Register
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-xl">
+        Taxi/PHV Data Submission
+      </h1>
+
+      <p class="govuk-label">Submit your taxi/PHV data here.</p>
+      <br>
+
+      <div class="govuk-form-group govuk-form-group--error">
+        <!-- <span id="more-detail-hint" class="govuk-hint">
+            The data must be submitted in .csv format
+        </span> -->
+        <span id="file-upload-1-error" class="govuk-error-message">
+            <span class="govuk-visually-hidden">Error:</span> The data must be submitted in .csv format
+        </span>
+        <input class="govuk-file-upload govuk-file-upload--error" id="file-upload-1" name="file-upload-1" type="file">
+      </div>
+
+      <button type="submit" class="govuk-button">
+        Submit file
+      </button>
+
+    </div>
+</div>
+
+{% endblock %}
