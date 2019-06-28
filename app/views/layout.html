@@ -35,12 +35,47 @@
 {% block header %}
   {% include "includes/cookie-banner.html" %}
   {# Set serviceName in config.js. #}
+  {% if authenticated %}
+  {{ govukHeader({
+    homepageUrl: "/",
+    serviceName: serviceName,
+    serviceUrl: "/",
+    containerClasses: "govuk-width-container",
+    navigation: [
+      {
+        href: "/guidance",
+        text: "Data submission rules",
+        active: true
+      },
+      {
+        href: "/upload",
+        text: "Upload",
+        active: true
+      },
+      {
+        href: "/sign-in",
+        text: "Sign out",
+        active: true
+      }
+    ]
+  }) }}
+  {% else %}
   {{ govukHeader({
     homepageUrl: "/",
     serviceName: serviceName,
     serviceUrl: "/",
     containerClasses: "govuk-width-container"
   }) }}
+  {% endif %}
+{% endblock %}
+
+{% block beforeContent %}
+{{ govukPhaseBanner({
+  tag: {
+    text: "beta"
+  },
+  html: 'This is a new service - your <a href="#" class="govuk-link">feedback</a> will help us to improve it.'
+}) }}
 {% endblock %}
 
 {% if useAutoStoreData %}

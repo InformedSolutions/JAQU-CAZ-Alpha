@@ -1,0 +1,112 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  National Taxi Register
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-xl">
+        Taxi/PHV Data Submission Rules
+      </h1>
+
+      <p class="govuk-body">This service allows you to upload your taxi/PHV data.</p>
+
+      <h2 class="govuk-heading-m">
+          File naming rules
+      </h2>
+
+      <p class="govuk-body">The file must be named according to the following format:</p>
+      <p class="govuk-body">CAZ-yyyy-mm-dd-XXXX-#.csv</p>
+      <p class="govuk-body">where:</p>
+      
+      <ul>
+          <li class="govuk-body">
+            yyyy-mm-dd represents the date the file was generated
+          </li>
+          <li class="govuk-body">
+            XXXX is the agreed identifier for your Licensing Authority
+          </li>
+          <li class="govuk-body">
+            # is the total number of records included in the file
+          </li>
+      </ul>
+
+      <p class="govuk-body">For example, CAZ-2019-06-18-AuthorityID-4242.csv</p>
+
+      <h2 class="govuk-heading-m">
+          Data rules
+      </h2>
+
+      <ul>
+          <li class="govuk-body">
+            No header row is included
+          </li>
+          <li class="govuk-body">
+            No trailing row is included
+          </li>
+          <li class="govuk-body">
+            There is no trailing comma for the last field
+          </li>
+          <li class="govuk-body">
+            All characters comply with the ‘accepted characters’ below
+          </li>
+          <li class="govuk-body">
+            No field contains a newline character
+          </li>
+          <li class="govuk-body">
+            A field containing a comma or double quote must be quoted in double quotes (“…”)
+          </li>
+          <li class="govuk-body">
+            Double quotes that form part of a field must be escaped with a double quote (i.e. a single “ in a field becomes “”)
+          </li>
+          <li class="govuk-body">
+            No spaces should be used between field values and separating commas
+          </li>
+          <li class="govuk-body">
+            No padding should be applied to fields, unless leading or trailing space is a legitimate part of the field’s value
+          </li>
+          <li class="govuk-body">
+            Each record is separated by a newline (ASCII carriage return)
+          </li>
+          <li class="govuk-body">
+            Optional fields with no values will be separated by a comma
+          </li>
+      </ul>
+
+      <h3 class="govuk-heading-s">Accepted characters</h3>
+
+        <p>Only the following characters may be included in the CSV file:</p>
+
+        <ul>
+            <li class="govuk-body">
+                A to Z (upper case)
+            </li>
+            <li class="govuk-body"> 
+                a to z (lower case)
+            </li>
+            <li class="govuk-body">
+                0 to 9 (numeric)
+            </li>
+            <li class="govuk-body">
+                Space & ‘( ) *,. / % ! + - : ; = ? @ [ ] ^ _ { } ~
+            </li>
+            <li class="govuk-body">
+                Ampersand (&) and apostrophe (‘) characters must be transmitted in escaped format
+            </li>
+        </ul>
+
+        <p class="govuk-body">Pound (£), dollar ($) and hash (#) characters are not permitted</p>
+        <br>
+
+      <form class="govuk-button" action="/upload" method="get">
+        Continue
+      </form>
+
+    </div>
+</div>
+
+{% endblock %}
