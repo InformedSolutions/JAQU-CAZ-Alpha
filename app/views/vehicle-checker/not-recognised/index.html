@@ -15,17 +15,20 @@ text: "Back"
 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-        <h1 class="govuk-heading-l">Vehicle details not found</h1>
-            <p>We can find no details for the vehicle with registration {{ data['vrn'] }}.</p>
-            <p>This may be because:</p>
-            <ul class="govuk-list govuk-list--bullet">
-                <li>Your vehicle is not registered with the DVLA</li>
-                <li>Your vehicle is not registered in the United Kingdom</li>
-            </ul>
-            <p>If you want to check the vehicle record held by the DVLA, please contact vehicle enquiries:</p>
-            <p>Phone: 0300 790 6802</br>Email: <a href="">Send an email</a></p>
-            <p>An advisor will be able to assist you 8.00am - 7.00pm Monday to Friday and 8.00am - 2.00pm on Saturday.</p>
-            <p><a href="/vehicle-checker/enter-vehicle-details">Search again</a></p>
+        <h1 class="govuk-heading-l not-found-title">Vehicle details could not be found</h1>
+            <table class="govuk-table">
+              <tbody class=govuk-table__body">
+                <tr class="govuk-table__row">
+                    <td class="govuk-table__cell"></td>
+                    <th class="govuk-table__cell"></th>
+                </tr>
+                <tr class="govuk-table__row">
+                  <td class="govuk-table__cell">You searched for</td>
+                  <th class="govuk-table__cell">{{ data['vrn'] | upper}}</th>
+                </tr>
+              </tbody>
+            </table>
+            <p>If you are sure that you entered the correct registration number and you need to make a further enquiries please contact <a href="https://www.gov.uk/change-vehicle-details-registration-certificate">DVLA</a></p>
     </div>
 </div>
 
