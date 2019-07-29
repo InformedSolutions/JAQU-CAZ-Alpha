@@ -3,6 +3,16 @@ const router = express.Router()
 
 // Add your routes here - above the module.exports line
 
+router.post('/vehicle-checker/enter-vehicle-details', function(req, res) {
+  var vrn = req.body['vrn'];
+  if (vrn.length < 2) {
+    res.redirect("/vehicle-checker/not-recognised");
+  }
+  else {
+    res.redirect('/vehicle-checker/confirm');
+  }
+})
+
 router.post('/vehicle-checker/local-authority', function (req, res) {
     var localAuthority = req.body['local-authority'];
 
