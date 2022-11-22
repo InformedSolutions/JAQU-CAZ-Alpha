@@ -1,3 +1,6 @@
+## Sensitive Credential Checks
+- [ ] As the author of these changes, I have checked for any sensitive credentials prior to this review being requested.
+- [ ] As a reviewer of these changes, I have checked for any sensitive credentials prior to approving this merge.
 
 ## Description
 
